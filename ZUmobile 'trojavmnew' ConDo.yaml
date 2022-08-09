@@ -1,0 +1,243 @@
+﻿port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+mixed-port: 7890
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: folder
+interface-name: en0
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 1.1.1.1
+    - 1.0.0.1
+  nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - tls://1.1.1.1:853
+    - tls://8.8.8.8:853
+  fallback:
+    - tcp://1.1.1.1
+    - tcp://8.8.8.8
+    - 1.1.1.1
+    - 8.8.8.8
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.1/16
+
+proxies:
+- name: "consgC"
+  type: trojan
+  server: dns.google.sg2.jupitervpn.me
+  port: 443
+  password: jupitervpn-buhyfftr
+  udp: true
+  sni: ulist.com.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "consgD"
+  type: trojan
+  server: dns.google.sg3.jupitervpn.me
+  port: 443
+  password: jupitervpn-coolikja
+  udp: true
+  sni: ulist.com.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "consgA"
+  type: trojan
+  server: dns.google.sg-full.privateip.net
+  port: 443
+  password: 432c0bb8-b09a-48ee-8781-53b2338591d5
+  udp: true
+  sni: ulist.com.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "consgB"
+  type: trojan
+  server: dns.google.sg2-full.privateip.net
+  port: 443
+  password: 232f18f4-363c-4f0b-a632-00176d2455c8
+  udp: true
+  sni: ulist.com.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "consgX"
+  type: trojan
+  server: www.google-analytics.com.gadennyc.cloudns.nz
+  port: 443
+  password: 77c46d9c-d39d-46d3-9c57-ebb849f4bc1b
+  udp: true
+  sni: ulist.com.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "backserver"
+  server: dns.google.sgv-3.openv2ray.com
+  port: 443
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  sni: ulist.com.my
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /u/opentunnel.net-maritycu
+   headers:
+    Host: ulist.com.my
+
+proxy-groups:
+  - name: manual
+    type: select
+    disable-udp: false
+    proxies:
+      - "bestpingA"
+      - "fallbackA"
+      - "bestpingX"
+      - "fallback-autoX"
+      - "fallback-autoA"
+      - "fallback-autoB"
+      - "fallback-autoC"
+      - "consgA"
+      - "consgB"
+      - "consgC"
+      - "consgD"
+      - "backserver"
+  - name: "fallbackA"
+    type: fallback
+    proxies:
+      - "consgA"
+      - "consgB"
+      - "consgC"
+      - "consgD"
+      - "backserver"
+    url: 'https://www.google.com/'
+    interval: 30
+  - name: "bestpingA"
+    type: url-test
+    proxies:
+      - "consgA"
+      - "consgB"
+      - "consgC"
+      - "consgD"
+      - "backserver"
+    tolerance: 2000
+    lazy: false
+    url: 'https://www.google.com/'
+    interval: 30
+  - name: "bestpingX"
+    type: url-test
+    proxies:
+      - "balancerA"
+      - "balancerB"
+    tolerance: 2000
+    lazy: false
+    url: 'https://www.google.com/'
+    interval: 30
+  - name: "fallback-autoX"
+    type: fallback
+    proxies:
+      - "balancerA"
+      - "balancerB"
+      - "backserver"
+    url: 'https://www.google.com/'
+    interval: 30
+  - name: "fallback-autoA"
+    type: fallback
+    proxies:
+      - "consgA"
+      - "consgB"
+      - "backserver"
+    url: 'https://www.google.com/'
+    interval: 30
+  - name: "fallback-autoB"
+    type: fallback
+    proxies:
+      - "consgB"
+      - "consgA"
+      - "backserver"
+    url: 'https://www.google.com/'
+    interval: 30
+  - name: "fallback-autoC"
+    type: fallback
+    proxies:
+      - "consgC"
+      - "consgD"
+      - "backserver"
+    url: 'https://www.google.com/'
+    interval: 30
+  - name: "fallback-autoD"
+    type: fallback
+    proxies:
+      - "consgD"
+      - "consgC"
+      - "backserver"
+    url: 'https://www.google.com/'
+    interval: 30
+  - name: "balancerA"
+    type: load-balance
+    proxies:
+      - "fallback-autoA"
+      - "fallback-autoB"
+    url: 'https://www.google.com/'
+    strategy: round-robin
+    interval: 90
+  - name: "balancerB"
+    type: load-balance
+    proxies:
+      - "fallback-autoC"
+      - "fallback-autoD"
+    url: 'https://www.google.com/'
+    strategy: round-robin
+    interval: 90
+
+rules:
+  - IP-CIDR,192.168.0.0/16,DIRECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,DIRECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,DIRECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,DIRECT,no-resolve
+  - IP-CIDR6,::1/128,DIRECT,no-resolve
+  - IP-CIDR6,fc00::/7,DIRECT,no-resolve
+  - IP-CIDR6,fe80::/10,DIRECT,no-resolve
+  - IP-CIDR6,fd00::/8,DIRECT,no-resolve
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - DOMAIN,analytics.google.com,REJECT
+  - DOMAIN,analyticsinsights-pa.googleapis.com,REJECT
+  - DOMAIN,analyticsreporting.googleapis.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,analysis,REJECT
+  - SRC-IP-CIDR,192.168.1.201/32,DIRECT
+  - IP-CIDR,198.18.0.1/16,REJECT,no-resolve
+  - GEOIP,IR,DIRECT
+  - MATCH,manual
+
