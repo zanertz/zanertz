@@ -51,7 +51,7 @@ proxy-groups:
 proxy-providers:
   malaycffa:
     type: http
-    url: "https://github.com/zanertz/zanertz/releases/download/cffazs/malaycffa.yaml"
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/malaycffa.yaml"
     interval: 120
     path: ./malaycffa.yaml
     health-check:
