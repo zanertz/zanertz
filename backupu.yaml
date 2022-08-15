@@ -1,7 +1,7 @@
 proxies:
 
 - name: "backserver"
-  server: dns.google.sgv-3.openv2ray.com
+  server: dns.google.sgv-3.openv2ray.commmm
   port: 443
   type: vmess
   uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
