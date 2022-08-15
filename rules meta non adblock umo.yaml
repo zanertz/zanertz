@@ -1,0 +1,195 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+mixed-port: 7894
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: folder
+interface-name: en0
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 45.90.28.149
+    - 45.90.30.149
+  nameserver:
+    - https://dns.nextdns.io/32435d
+    - tls://32435d.dns.nextdns.io:853
+  fallback:
+    - tcp://45.90.28.149
+    - tcp://45.90.30.149
+  dns-hijack:
+    - tcp://45.90.28.149
+    - tcp://45.90.30.149
+
+proxy-groups: 
+- name: All 
+  type: select
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 30
+  proxies:
+  - Ping++
+  - Fallback
+  - FallbackLB
+  - FallbackX
+  - Manual
+- name: Manual 
+  type: select
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 30
+  use:
+  - trojan1u
+  - trojan1u2
+  - trojan2u
+  - backupu
+- name: Ping++
+  type: url-test
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 15
+  tolerance: 1200
+  use:
+  - trojan1u
+  - trojan2u
+  - backupu
+  - trojan1u2
+- name: FallbackLB
+  type: load-balance
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 23
+  strategy: consistent-hashing
+  disable-udp: false
+  proxies:
+  - Pinglb
+  - Fallback
+- name: Pinglb
+  type: url-test
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 10
+  tolerance: 100
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+  - backupu
+  - trojan2u
+- name: FallbackX
+  type: fallback
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 12
+  lazy: false
+  proxies:
+  - LoadBalance_TrojanA
+  - LoadBalance_TrojanB
+  - BackupX
+- name: Fallback
+  type: fallback
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 10
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+  - trojan2u
+  - backupu
+- name: LoadBalance_TrojanA
+  type: load-balance
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 15
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - trojan1u
+- name: LoadBalance_TrojanB
+  type: load-balance
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 15
+  strategy: round-robin
+  disable-udp: false
+  use:
+  - trojan2u
+- name: BackupX
+  type: url-test
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 15
+  tolerance: 1200
+  use:
+  - backupu
+
+proxy-providers:
+  trojan1u:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/trojan1u.yaml"
+    interval: 120
+    path: ./trojan1u.yaml
+    health-check:
+      enable: true
+      interval: 62
+      # lazy: false
+      url: http://www.gstatic.com/generate_204
+
+  trojan1u2:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/trojan1u2.yaml"
+    interval: 131
+    path: ./trojan1u2.yaml
+    health-check:
+      enable: true
+      interval: 62
+      lazy: false
+      url: http://www.gstatic.com/generate_204
+
+  trojan2u:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/trojan2u.yaml"
+    interval: 345
+    path: ./trojan2u.yaml
+    health-check:
+      enable: true
+      interval: 62
+      lazy: false
+      url: http://www.gstatic.com/generate_204
+
+  backupu:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/backupu.yaml"
+    interval: 321
+    path: ./backupu.yaml
+    health-check:
+      enable: true
+      interval: 62
+      lazy: false
+      url: http://www.gstatic.com/generate_204
+
+
+rules:
+  - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,REJECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,REJECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  - IP-CIDR6,fc00::/7,REJECT,no-resolve
+  - IP-CIDR6,fe80::/10,REJECT,no-resolve
+  - IP-CIDR6,fd00::/8,REJECT,no-resolve
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - DOMAIN,analytics.google.com,REJECT
+  - DOMAIN,analyticsinsights-pa.googleapis.com,REJECT
+  - DOMAIN,analyticsreporting.googleapis.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,analysis,REJECT
+  - SRC-IP-CIDR,192.168.1.201/32,REJECT
+  - IP-CIDR,198.18.0.1/16,REJECT,REJECT
+  - GEOIP,IR,REJECT
+  - MATCH,All
