@@ -1,16 +1,17 @@
 proxies:
 
-  - name: trojan-grpc_do2
-    server: do2.kitu.xyz
-    port: 443
-    type: trojan
-    password: 641af013-a2ed-4954-bd8e-1b39d3fa22c1
-    network: grpc
-    sni: mobilelegends.com
-    # skip-cert-verify: true
-    udp: true
-    grpc-opts:
-      grpc-service-name: mobilelegends.com
+- name: "trogprcDo2"
+  server: do2.kitu.xyz
+  port: 443
+  type: trojan
+  password: 641af013-a2ed-4954-bd8e-1b39d3fa22c1
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: grpc
+  grpc-opts:
+   grpc-mode: gun
+   grpc-service-name: xray-trojan-grpc
+  udp: true
 
 - name: "backserver"
   server: my.v2-ray.commm
