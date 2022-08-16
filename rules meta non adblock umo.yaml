@@ -15,13 +15,16 @@ dns:
   listen: 0.0.0.0:53
   default-nameserver:
     - 94.140.14.14
+    - 94.140.15.15
   nameserver:
+    - https://dns.adguard-dns.com/dns-query
     - tls://dns.adguard-dns.com:853
   fallback:
     - tcp://94.140.14.14
-    - 94.140.14.14
+    - tcp://94.140.15.15
   dns-hijack:
     - tcp://94.140.14.14
+    - tcp://94.140.15.15
 
 proxy-groups: 
 - name: All 
