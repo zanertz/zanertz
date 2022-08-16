@@ -14,17 +14,14 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   default-nameserver:
-    - 45.90.28.149
-    - 45.90.30.149
+    - 94.140.14.14
   nameserver:
-    - https://dns.nextdns.io/32435d
-    - tls://32435d.dns.nextdns.io:853
+    - tls://dns.adguard-dns.com:853
   fallback:
-    - tcp://45.90.28.149
-    - tcp://45.90.30.149
+    - tcp://94.140.14.14
+    - 94.140.14.14
   dns-hijack:
-    - tcp://45.90.28.149
-    - tcp://45.90.30.149
+    - tcp://94.140.14.14
 
 proxy-groups: 
 - name: All 
