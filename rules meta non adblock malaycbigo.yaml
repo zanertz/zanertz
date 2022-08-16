@@ -29,36 +29,43 @@ dns:
 proxy-groups: 
 - name: All 
   type: select
-  url: 'https://www.google.com/'
-  interval: 30
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 15
   proxies:
   - Ping++
   - Manual
 - name: Manual 
   type: select
-  url: 'https://www.google.com/'
-  interval: 30
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 15
   use:
   - malaycffa
 - name: Ping++
   type: url-test
-  url: 'https://www.google.com/'
-  interval: 30
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 15
   tolerance: 1200
+  use:
+  - malaycffa
+- name: Fallback
+  type: fallback
+  url: 'http://www.gstatic.com/generate_204'
+  interval: 10
+  lazy: false
   use:
   - malaycffa
 
 proxy-providers:
   malaycffa:
     type: http
-    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/malaycffa.yaml"
+    url: "https://github.com/zanertz/zanertz/releases/download/cffazs/malaycffa.yaml"
     interval: 120
     path: ./malaycffa.yaml
     health-check:
       enable: true
-      interval: 15
+      interval: 50
       lazy: false
-      url: 'https://www.google.com/'
+      url: http://www.gstatic.com/generate_204
 
 rules:
   - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
@@ -87,4 +94,4 @@ rules:
   - SRC-IP-CIDR,192.168.1.201/32,REJECT
   - IP-CIDR,198.18.0.1/16,REJECT,REJECT
   - GEOIP,IR,REJECT
-  - MATCH,Ping++
+  - MATCH,All
