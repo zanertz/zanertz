@@ -14,17 +14,17 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   default-nameserver:
-    - 94.140.14.14
-    - 94.140.15.15
+    - 8.8.8.8
+    - 8.8.4.4
   nameserver:
-    - https://dns.adguard-dns.com/dns-query
-    - tls://dns.adguard-dns.com:853
+    - https://basic.rethinkdns.com/1:MAIAMDgAEAA=
+    - tls://1-gabaambyaaiaa.max.rethinkdns.com:853
   fallback:
-    - tcp://94.140.14.14
-    - tcp://94.140.15.15
+    - tcp://8.8.8.8
+    - tcp://8.8.4.4
   dns-hijack:
-    - tcp://94.140.14.14
-    - tcp://94.140.15.15
+    - tcp://8.8.8.8
+    - tcp://8.8.4.4
 
 proxy-groups: 
 - name: All 
