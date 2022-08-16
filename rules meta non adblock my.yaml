@@ -40,14 +40,14 @@ proxy-groups:
   url: 'http://www.gstatic.com/generate_204'
   interval: 15
   use:
-  - malaycffa
+  - malaycffall
 - name: Ping++
   type: url-test
   url: 'http://www.gstatic.com/generate_204'
   interval: 15
   tolerance: 1200
   use:
-  - malaycffa
+  - malaycffall
 - name: Fallback
   type: fallback
   url: 'http://www.gstatic.com/generate_204'
