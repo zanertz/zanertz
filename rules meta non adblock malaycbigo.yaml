@@ -33,6 +33,7 @@ proxy-groups:
   interval: 15
   proxies:
   - Ping++
+  - Fallback
   - Manual
 - name: Manual 
   type: select
