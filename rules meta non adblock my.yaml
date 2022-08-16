@@ -54,7 +54,7 @@ proxy-groups:
   interval: 10
   lazy: false
   use:
-  - malaycffa
+  - malaycffall
 
 proxy-providers:
   malaycffall:
