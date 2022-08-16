@@ -1,0 +1,30 @@
+proxies:
+
+  - name: trojan-grpc_do2
+    server: do2.kitu.xyz
+    port: 443
+    type: trojan
+    password: 641af013-a2ed-4954-bd8e-1b39d3fa22c1
+    network: grpc
+    sni: mobilelegends.com
+    # skip-cert-verify: true
+    udp: true
+    grpc-opts:
+      grpc-service-name: mobilelegends.com
+
+- name: "backserver"
+  server: my.v2-ray.commm
+  port: 443
+  type: vmess
+  uuid: fbf78c1f-6f42-45e0-a1a9-67de703b90f8
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /fastssh/gusadz/62f4d339dcba9/
+   headers:
+    Host: mobilelegends.com
