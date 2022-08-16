@@ -59,7 +59,7 @@ proxy-groups:
 proxy-providers:
   malaycffall:
     type: http
-    url: "https://github.com/zanertz/zanertz/releases/download/cffazs/malaycffall.yaml"
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/malaycffall.yaml"
     interval: 120
     path: ./malaycffall.yaml
     health-check:
