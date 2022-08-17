@@ -14,17 +14,17 @@ dns:
   enable: true
   listen: 0.0.0.0:53
   default-nameserver:
-    - 8.8.8.8
-    - 8.8.4.4
+    - 1.1.1.1
+    - 1.0.0.1
   nameserver:
-    - https://basic.rethinkdns.com/1:MAIAMDgAEAA=
-    - tls://1-gabaambyaaiaa.max.rethinkdns.com:853
+    - https://basic.rethinkdns.com/1:8B9jAwTggsFgIQgAABEAQMm_ACg=
+    - tls://1-6apwgaye4cbmcybbbaaaaeiaide36abi.max.rethinkdns.com:853
   fallback:
-    - tcp://8.8.8.8
-    - tcp://8.8.4.4
+    - tcp://1.1.1.1
+    - tcp://1.0.0.1
   dns-hijack:
-    - tcp://8.8.8.8
-    - tcp://8.8.4.4
+    - tcp://1.1.1.1
+    - tcp://1.0.0.1
 
 proxy-groups: 
 - name: All 
@@ -51,6 +51,7 @@ proxy-groups:
   url: 'http://www.gstatic.com/generate_204'
   interval: 15
   tolerance: 1200
+  lazy: true
   use:
   - trojan1u
   - trojan2u
@@ -69,8 +70,8 @@ proxy-groups:
   type: url-test
   url: 'http://www.gstatic.com/generate_204'
   interval: 10
-  tolerance: 100
-  lazy: false
+  tolerance: 600
+  lazy: true
   use:
   - trojan1u
   - trojan1u2
@@ -80,7 +81,7 @@ proxy-groups:
   type: fallback
   url: 'http://www.gstatic.com/generate_204'
   interval: 12
-  lazy: false
+  lazy: true
   proxies:
   - LoadBalance_TrojanA
   - LoadBalance_TrojanB
@@ -89,7 +90,7 @@ proxy-groups:
   type: fallback
   url: 'http://www.gstatic.com/generate_204'
   interval: 10
-  lazy: false
+  lazy: true
   use:
   - trojan1u
   - trojan1u2
@@ -127,7 +128,7 @@ proxy-providers:
     path: ./trojan1u.yaml
     health-check:
       enable: true
-      interval: 62
+      interval: 58
       # lazy: false
       url: http://www.gstatic.com/generate_204
 
@@ -149,7 +150,7 @@ proxy-providers:
     path: ./trojan2u.yaml
     health-check:
       enable: true
-      interval: 62
+      interval: 65
       lazy: false
       url: http://www.gstatic.com/generate_204
 
@@ -160,7 +161,7 @@ proxy-providers:
     path: ./backupu.yaml
     health-check:
       enable: true
-      interval: 62
+      interval: 72
       lazy: false
       url: http://www.gstatic.com/generate_204
 
