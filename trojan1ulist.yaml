@@ -1,0 +1,37 @@
+proxies:
+
+- name: "Do2"
+  type: trojan
+  server: ulist.com.my.do2.kitu.xyz
+  port: 443
+  password: whyvpn-ranhefz
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "Do3"
+  type: trojan
+  server: ulist.com.my.do3.kitu.xyz
+  port: 443
+  password: whyvpn-flairytz
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "Do1"
+  type: trojan
+  server: ulist.com.my.do1.kitu.xyz
+  port: 443
+  password: whyvpn-baronhz
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true

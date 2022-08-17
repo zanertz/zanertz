@@ -1,0 +1,25 @@
+proxies:
+
+- name: "consg2"
+  type: trojan
+  server: ulist.com.my.sg2.jupitervpn.me
+  port: 443
+  password: jupitervpn-zucjsz
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "consg3"
+  type: trojan
+  server: ulist.com.my.sg3.jupitervpn.me
+  port: 443
+  password: jupitervpn-vbuxzas
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
