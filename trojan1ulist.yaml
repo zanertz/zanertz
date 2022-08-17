@@ -1,10 +1,10 @@
 proxies:
 
-- name: "Do2"
+- name: "RaceA"
   type: trojan
-  server: ulist.com.my.do2.kitu.xyz
+  server: ulist.com.my.sg-full.privateip.net
   port: 443
-  password: whyvpn-ranhefz
+  password: ab25b996-dc50-476b-8ce0-9be4ae15f063
   udp: true
   sni: mm.net.my
   alpn:
@@ -12,11 +12,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "Do3"
+- name: "RaceB"
   type: trojan
-  server: ulist.com.my.do3.kitu.xyz
+  server: ulist.com.my.sg2-full.privateip.net
   port: 443
-  password: whyvpn-flairytz
+  password: 17b208cd-8b65-45d0-975c-93a3cff6701e
   udp: true
   sni: mm.net.my
   alpn:
@@ -24,11 +24,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "Do1"
+- name: "freevmessT"
   type: trojan
-  server: ulist.com.my.do1.kitu.xyz
+  server: dns.google.fvm.merutd.cloudns.nz
   port: 443
-  password: whyvpn-baronhz
+  password: f049093c-50e7-4f9b-b0bd-b0ffff8f4302
   udp: true
   sni: mm.net.my
   alpn:
