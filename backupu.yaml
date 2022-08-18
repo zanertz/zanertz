@@ -16,3 +16,20 @@ proxies:
    path: /u/opentunnel.net-vuytda
    headers:
     Host: mobilelegends.com
+
+- name: "backserver2"
+  server: dns.google.sg1.jupiterv2ray.xyz
+  port: 443
+  type: vmess
+  uuid: c9100fb8-df85-4f41-b48e-47389222dae1
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /v2ray
+   headers:
+    Host: mobilelegends.com
