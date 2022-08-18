@@ -18,10 +18,10 @@ proxies:
     Host: mobilelegends.com
 
 - name: "backserver2"
-  server: ulist.com.my.merutd.cloudns.nz
+  server: dns.google.dynamic-sg2b.obfs.xyz
   port: 443
   type: vmess
-  uuid: c9100fb8-df85-4f41-b48e-47389222dae1
+  uuid: 2e620637-d194-4f23-ac04-e75cc700b1a1
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
@@ -30,6 +30,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /v2ray
+   path: /fastssh
    headers:
     Host: mobilelegends.com
