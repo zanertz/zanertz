@@ -18,7 +18,7 @@ proxies:
     Host: mm.net.my
 
 - name: "backserver2"
-  server: ulist.com.my.sg1.jupiterv2ray.xyz
+  server: ulist.com.my.merutd.cloudns.nz
   port: 443
   type: vmess
   uuid: c9100fb8-df85-4f41-b48e-47389222dae1
