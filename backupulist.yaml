@@ -13,6 +13,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-umixza
+   path: /u/opentunnel.net-vuytda
    headers:
     Host: mm.net.my
