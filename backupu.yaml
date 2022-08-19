@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-vuytda
+   path: /u/opentunnel.net-cvxdqzuzu
    headers:
     Host: mobilelegends.com
 
@@ -21,7 +21,7 @@ proxies:
   server: dns.google.dynamic-sg2b.obfs.xyz
   port: 443
   type: vmess
-  uuid: 2e620637-d194-4f23-ac04-e75cc700b1a1
+  uuid: 9dd120f2-d06e-41d0-a5a1-73fbe26640ea
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
