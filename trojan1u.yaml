@@ -2,7 +2,7 @@ proxies:
 
 - name: "RaceA"
   type: trojan
-  server: dns.google.sg-full.privateip.net
+  server: dns.google.sg-full.privateip.nett
   port: 443
   password: ab25b996-dc50-476b-8ce0-9be4ae15f063
   udp: true
@@ -14,7 +14,7 @@ proxies:
 
 - name: "RaceB"
   type: trojan
-  server: dns.google.sg2-full.privateip.net
+  server: dns.google.sg2-full.privateip.nett
   port: 443
   password: 17b208cd-8b65-45d0-975c-93a3cff6701e
   udp: true
