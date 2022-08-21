@@ -33,6 +33,7 @@ proxy-groups:
   interval: 30
   proxies:
   - Ping++
+  - PingLB++
   - Fallback
   - FallbackLB
   - FallbackX
@@ -66,11 +67,31 @@ proxy-groups:
   proxies:
   - Pinglb
   - Fallback
+- name: PingLB++
+  type: load-balance
+  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  interval: 15
+  strategy: consistent-hashing
+  disable-udp: false
+  proxies:
+  - Pinglb
+  - Pinglb2
 - name: Pinglb
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 10
+  interval: 20
   tolerance: 600
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+  - backupu
+  - trojan2u
+- name: Pinglb2
+  type: url-test
+  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  interval: 10
+  tolerance: 300
   lazy: false
   use:
   - trojan1u
