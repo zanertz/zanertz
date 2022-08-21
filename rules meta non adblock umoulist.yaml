@@ -50,8 +50,8 @@ proxy-groups:
 - name: Ping++
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 30
-  tolerance: 500
+  interval: 12
+  tolerance: 800
   lazy: true
   use:
   - trojan1u
@@ -61,7 +61,7 @@ proxy-groups:
 - name: FallbackLB
   type: load-balance
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 15
+  interval: 12
   strategy: consistent-hashing
   disable-udp: false
   proxies:
@@ -70,7 +70,7 @@ proxy-groups:
 - name: PingLB++
   type: load-balance
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 30
+  interval: 12
   strategy: consistent-hashing
   disable-udp: false
   proxies:
@@ -79,9 +79,9 @@ proxy-groups:
 - name: Pinglb
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 60
-  tolerance: 2000
-  lazy: true
+  interval: 6
+  tolerance: 800
+  lazy: false
   use:
   - trojan1u
   - trojan1u2
@@ -90,9 +90,9 @@ proxy-groups:
 - name: Pinglb2
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 30
-  tolerance: 300
-  lazy: true
+  interval: 6
+  tolerance: 800
+  lazy: false
   use:
   - trojan1u
   - trojan1u2
@@ -102,7 +102,7 @@ proxy-groups:
   type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
   interval: 10
-  lazy: false
+  lazy: true
   proxies:
   - PingLB++
   - Ping++
