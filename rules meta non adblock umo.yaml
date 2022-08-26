@@ -17,8 +17,8 @@ dns:
     - 1.1.1.1
     - 1.0.0.1
   nameserver:
-    - https://basic.rethinkdns.com/1:8B9jAwTggsFgIQgAABEAQMm_ACg=
-    - tls://1-6apwgaye4cbmcybbbaaaaeiaide36abi.max.rethinkdns.com:853
+    - https://basic.rethinkdns.com/1:sJ8AOP8D___5_8AgIEAAEch_QCg=
+    - tls://1-wcpqaoh7ap7776p7yaqcaqaacheh6qbi.max.rethinkdns.com:853
   fallback:
     - tcp://1.1.1.1
     - tcp://1.0.0.1
