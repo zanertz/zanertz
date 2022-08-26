@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: ulist.com.my.ab.gadennyc.cloudns.nz
   port: 443
-  password: jupitervpn-sleghyt
+  password: jupitervpn-zuxcpp
   udp: true
   sni: mobilelegends.com
   alpn:
