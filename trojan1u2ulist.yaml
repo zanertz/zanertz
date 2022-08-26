@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: ulist.com.my.do3.kitu.xyz
   port: 443
-  password: whyvpn-cvuguaz
+  password: whyvpn-axiuhy
   udp: true
   sni: mm.net.my
   alpn:
