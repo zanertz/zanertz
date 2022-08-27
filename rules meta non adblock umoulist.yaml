@@ -108,7 +108,6 @@ proxy-groups:
   use:
   - trojan1u
   - trojan1u2
-  - backupu
 - name: Pinglb2
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
@@ -118,7 +117,6 @@ proxy-groups:
   use:
   - trojan1u
   - trojan1u2
-  - backupu
 - name: FallbackXch
   type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
