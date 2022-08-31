@@ -24,6 +24,23 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
+- name: "VSM2"
+  server: v-2.sshcf.xyz
+  port: 443
+  type: vmess
+  uuid: eead95f8-cb1f-4045-98bc-29d67e6b3541
+  sni: mm.net.my
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /vpnstunnel/
+   headers:
+    Host: mm.net.my
+
 - name: "freevmessT"
   type: trojan
   server: dns.google.fvm.merutd.cloudns.nz
