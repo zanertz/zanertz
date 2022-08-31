@@ -1,10 +1,10 @@
 proxies:
 
-- name: "Do3"
+- name: "RaceA"
   type: trojan
-  server: dns.google.do3.kitu.xyz
+  server: dns.google.sg-full.privateip.net
   port: 443
-  password: whyvpn-xusazsz
+  password: 4f0a2bbb-e915-41dd-8c2f-3bf5cc6d04c7
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -12,11 +12,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "Do1"
+- name: "RaceB"
   type: trojan
-  server: dns.google.do1.kitu.xyz
+  server: dns.google.sg2-full.privateip.net
   port: 443
-  password: whyvpn-jemingy
+  password: 419ca4ab-6a1e-40fd-8073-47d26228c42a
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -24,14 +24,15 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "Do2"
+- name: "freevmessT"
   type: trojan
-  server: dns.google.do2.kitu.xyz
+  server: dns.google.fvm.merutd.cloudns.nz
   port: 443
-  password: whyvpn-hadamfaz
+  password: f049093c-50e7-4f9b-b0bd-b0ffff8f4302
   udp: true
   sni: mobilelegends.com
   alpn:
      - h2
      - http/1.1
   skip-cert-verify: true
+
