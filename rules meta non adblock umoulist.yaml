@@ -79,7 +79,7 @@ proxy-groups:
   interval: 5
   strategy: consistent-hashing
   disable-udp: false
-  lazy: false
+  lazy: true
   proxies:
   - Fallback
   - Fallback2
@@ -89,7 +89,7 @@ proxy-groups:
   interval: 5
   strategy: consistent-hashing
   disable-udp: false
-  lazy: false
+  lazy: true
   proxies:
   - Pinglb
   - Pinglb2
@@ -106,19 +106,21 @@ proxy-groups:
 - name: Pinglb
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 15
-  tolerance: 1500
+  interval: 12
+  tolerance: 1200
   lazy: false
   use:
   - trojan1u
+  - trojan1u2
 - name: Pinglb2
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 60
-  tolerance: 2000
-  lazy: false
+  interval: 6
+  tolerance: 600
+  lazy: true
   use:
   - trojan1u
+  - trojan1u2
 - name: FallbackXch
   type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
@@ -156,9 +158,8 @@ proxy-groups:
 - name: Fallback
   type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 30
-  tolerance: 1500
   lazy: false
+  interval: 10
   use:
   - trojan1u
   - trojan1u2
@@ -167,9 +168,8 @@ proxy-groups:
 - name: Fallback2
   type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 60
-  tolerance: 2000
   lazy: false
+  interval: 10
   use:
   - trojan1u
   - trojan1u2
@@ -178,17 +178,15 @@ proxy-groups:
 - name: BackupV
   type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 30
-  tolerance: 2000
   lazy: false
+  interval: 10
   use:
   - trojan1u2
 - name: BackupX
   type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 30
-  tolerance: 2000
   lazy: false
+  interval: 10
   use:
   - backupu
   - trojan2u
