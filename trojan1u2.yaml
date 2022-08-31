@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: dns.google.do3.kitu.xyz
   port: 443
-  password: whyvpn-axiuhy
+  password: whyvpn-xusazsz
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -16,7 +16,7 @@ proxies:
   type: trojan
   server: dns.google.do1.kitu.xyz
   port: 443
-  password: whyvpn-onilua9
+  password: whyvpn-jemingy
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -28,10 +28,27 @@ proxies:
   type: trojan
   server: dns.google.do2.kitu.xyz
   port: 443
-  password: whyvpn-azccxza98
+  password: whyvpn-hadamfaz
   udp: true
   sni: mobilelegends.com
   alpn:
      - h2
      - http/1.1
   skip-cert-verify: true
+
+- name: "VSM2"
+  server: v-2.sshcf.xyz
+  port: 443
+  type: vmess
+  uuid: eead95f8-cb1f-4045-98bc-29d67e6b3541
+  sni: mm.net.my
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /vpnstunnel/
+   headers:
+    Host: mm.net.my

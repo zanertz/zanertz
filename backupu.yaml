@@ -13,9 +13,26 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-munbvc
+   path: /u/opentunnel.net-uduzds
    headers:
     Host: mobilelegends.com
+
+- name: "VSM2"
+  server: ulist.com.my.vsmt.banutt.cloudns.nz
+  port: 443
+  type: vmess
+  uuid: eead95f8-cb1f-4045-98bc-29d67e6b3541
+  sni: mm.net.my
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /vpnstunnel/
+   headers:
+    Host: mm.net.my
 
 - name: "backserver2"
   server: dns.google.dynamic-sg2b.obfs.xyz
