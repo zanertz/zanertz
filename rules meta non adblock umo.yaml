@@ -81,7 +81,7 @@ proxy-groups:
   interval: 6
   tolerance: 1200
   lazy: false
-  use:
+  proxies:
   - Pinga
   - Pingb
   - Fallback
@@ -190,7 +190,7 @@ proxy-groups:
   type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
   lazy: false
-  interval: 10
+  interval: 30
   use:
   - trojan1u
   - trojan1u2
@@ -200,7 +200,7 @@ proxy-groups:
   type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
   lazy: false
-  interval: 10
+  interval: 60
   use:
   - trojan1u
   - trojan1u2

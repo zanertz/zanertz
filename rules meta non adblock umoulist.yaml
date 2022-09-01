@@ -70,7 +70,7 @@ proxy-groups:
   interval: 6
   tolerance: 1200
   lazy: false
-  use:
+  proxies:
   - Pinga
   - Pingb
   - Fallback
