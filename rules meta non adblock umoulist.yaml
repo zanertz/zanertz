@@ -71,10 +71,28 @@ proxy-groups:
   tolerance: 1200
   lazy: false
   use:
-  - trojan1u
-  - trojan1u2
+  - Pinga
+  - Pingb
   - Fallback
   - Fallback2
+- name: Pinga
+  type: url-test
+  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  interval: 12
+  tolerance: 1200
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+- name: Pingb
+  type: url-test
+  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  interval: 12
+  tolerance: 600
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
 - name: FallbackLBrb
   type: load-balanceFallback2
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
