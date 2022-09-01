@@ -93,20 +93,20 @@ proxy-groups:
   - Pingb
   - Manual1
   - Manual2
-  - Fallback2
+  - Fallback
 - name: Pinga
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 12
-  tolerance: 1200
+  interval: 30
+  tolerance: 300
   lazy: false
   use:
   - trojan1u
 - name: Pingb
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 12
-  tolerance: 600
+  interval: 30
+  tolerance: 300
   lazy: false
   use:
   - trojan1u2
