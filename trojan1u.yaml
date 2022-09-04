@@ -36,11 +36,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "VSM2"
-  server: v-2.sshcf.xyz
+- name: "VSM1"
+  server: v-1.sshcf.xyz
   port: 443
   type: vmess
-  uuid: eead95f8-cb1f-4045-98bc-29d67e6b3541
+  uuid: 1e354f7b-7384-4b5d-b028-1dff15d979df
   sni: mm.net.my
   alterId: 0
   cipher: auto
@@ -51,4 +51,21 @@ proxies:
   ws-opts:
    path: /vpnstunnel/
    headers:
-    Host: mm.net.my
+    Host: mobilelegends.com
+
+- name: "VSM2"
+  server: v-2.sshcf.xyz
+  port: 443
+  type: vmess
+  uuid: 89f80680-3e98-4c8d-b61c-5663a7c6419a
+  sni: mm.net.my
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /vpnstunnel/
+   headers:
+    Host: mobilelegends.com
