@@ -1,7 +1,7 @@
 proxies:
 - name: "consg2"
   type: trojan
-  server: dns.google.sg2.sjupiter.net
+  server: ulist.com.my.ab.gadennyc.cloudns.nz
   port: 443
   password: jupitervpn-wendysky
   udp: true
@@ -13,7 +13,7 @@ proxies:
 
 - name: "consg3"
   type: trojan
-  server: dns.google.sg3.sjupiter.net
+  server: ulist.com.my.ac.gadennyc.cloudns.nz
   port: 443
   password: jupitervpn-murtsfaz
   udp: true
