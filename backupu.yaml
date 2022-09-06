@@ -34,6 +34,23 @@ proxies:
    headers:
     Host: mm.net.my
 
+- name: "backservermy"
+  server: my.v2-ray.com
+  port: 443
+  type: vmess
+  uuid: a9481600-ef36-402a-a0e5-5547bfd7b87c
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /fastssh/ffuahdc/6316deb4f291c/
+   headers:
+    Host: mobilelegends.com
+
 - name: "backserver2"
   server: dns.google.dynamic-sg2b.obfs.xyz
   port: 443
