@@ -29,7 +29,7 @@ dns:
 proxy-groups: 
 - name: All 
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 15
   proxies:
   - Ping++
@@ -46,7 +46,7 @@ proxy-groups:
   - Manual
 - name: Manual 
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 15
   use:
   - trojan1u
@@ -55,7 +55,7 @@ proxy-groups:
   - backupu
 - name: Manual1
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 15
   use:
   - trojan1u
@@ -64,7 +64,7 @@ proxy-groups:
   - backupu
 - name: Manual2
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 15
   use:
   - trojan1u
@@ -73,7 +73,7 @@ proxy-groups:
   - backupu
 - name: Ping++
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 12
   tolerance: 1200
   lazy: false
@@ -84,7 +84,7 @@ proxy-groups:
   - trojan2u
 - name: Ping++mix
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 6
   tolerance: 1200
   lazy: false
@@ -96,7 +96,7 @@ proxy-groups:
   - Fallback
 - name: Pinga
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 12
   tolerance: 1200
   lazy: false
@@ -105,7 +105,7 @@ proxy-groups:
   - trojan1u2
 - name: Pingb
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 12
   tolerance: 1200
   lazy: false
@@ -114,7 +114,7 @@ proxy-groups:
   - trojan1u
 - name: FallbackLBrb
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 12
   strategy: round-robin
   disable-udp: false
@@ -124,7 +124,7 @@ proxy-groups:
   - Fallback2
 - name: FallbackLBch
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 12
   strategy: consistent-hashing
   disable-udp: false
@@ -134,7 +134,7 @@ proxy-groups:
   - Fallback2
 - name: PingLB++ch
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 5
   strategy: consistent-hashing
   disable-udp: false
@@ -144,7 +144,7 @@ proxy-groups:
   - Pinglb2
 - name: PingLB++rb
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 5
   strategy: round-robin
   disable-udp: false
@@ -154,7 +154,7 @@ proxy-groups:
   - Pinglb2
 - name: Pinglb
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 12
   tolerance: 1200
   lazy: false
@@ -163,7 +163,7 @@ proxy-groups:
   - trojan1u2
 - name: Pinglb2
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 12
   tolerance: 1200
   lazy: false
@@ -172,7 +172,7 @@ proxy-groups:
   - trojan1u2
 - name: FallbackXch
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 5
   lazy: false
   proxies:
@@ -180,7 +180,7 @@ proxy-groups:
   - BackupX
 - name: FallbackXrb
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 5
   lazy: false
   proxies:
@@ -188,7 +188,7 @@ proxy-groups:
   - BackupX
 - name: PingLBXch
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 5
   lazy: false
   proxies:
@@ -197,7 +197,7 @@ proxy-groups:
   - BackupX
 - name: PingLBXrb
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   interval: 5
   lazy: false
   proxies:
@@ -206,7 +206,7 @@ proxy-groups:
   - BackupX
 - name: Fallback
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   lazy: false
   interval: 12
   proxies:
@@ -217,7 +217,7 @@ proxy-groups:
   - BackupV
 - name: Fallback2
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   lazy: false
   interval: 12
   proxies:
@@ -228,14 +228,14 @@ proxy-groups:
   - BackupV
 - name: BackupV
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   lazy: false
   interval: 12
   use:
   - trojan1u2
 - name: BackupX
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'http://banutt.cloudns.nz/'
   lazy: false
   interval: 12
   use:
@@ -252,7 +252,7 @@ proxy-providers:
       enable: true
       interval: 58
       # lazy: false
-      url: https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt
+      url: http://banutt.cloudns.nz/
 
   trojan1u2:
     type: http
@@ -263,7 +263,7 @@ proxy-providers:
       enable: true
       interval: 62
       lazy: false
-      url: https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt
+      url: http://banutt.cloudns.nz/
 
   trojan2u:
     type: http
@@ -274,7 +274,7 @@ proxy-providers:
       enable: true
       interval: 65
       lazy: false
-      url: https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt
+      url: http://banutt.cloudns.nz/
 
   backupu:
     type: http
@@ -285,7 +285,7 @@ proxy-providers:
       enable: true
       interval: 72
       lazy: false
-      url: https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt
+      url: http://banutt.cloudns.nz/
 
 
 rules:
