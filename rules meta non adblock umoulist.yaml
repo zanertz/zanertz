@@ -245,7 +245,7 @@ proxy-groups:
 proxy-providers:
   trojan1u:
     type: http
-    url: ''https://raw.githubusercontent.com/zanertz/zanertz/main/trojan1ulist.yaml''
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/trojan1ulist.yaml"
     interval: 120
     path: ./trojan1u.yaml
     health-check:
