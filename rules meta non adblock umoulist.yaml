@@ -177,6 +177,7 @@ proxy-groups:
   lazy: false
   proxies:
   - FallbackLBch
+  - BackupV
   - BackupX
 - name: FallbackXrb
   type: fallback
@@ -185,6 +186,7 @@ proxy-groups:
   lazy: false
   proxies:
   - FallbackLBrb
+  - BackupV
   - BackupX
 - name: PingLBXch
   type: fallback
@@ -232,6 +234,7 @@ proxy-groups:
   lazy: false
   interval: 12
   use:
+  - trojan1u
   - trojan1u2
 - name: BackupX
   type: fallback
