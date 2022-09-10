@@ -40,7 +40,7 @@ proxies:
   server: v-1.sshcf.xyz
   port: 443
   type: vmess
-  uuid: 1e354f7b-7384-4b5d-b028-1dff15d979df
+  uuid: c96119ca-4682-4150-a2f1-234d50b68dff
   sni: mm.net.my
   alterId: 0
   cipher: auto
