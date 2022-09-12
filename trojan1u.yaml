@@ -1,16 +1,21 @@
 proxies:
 
-- name: "Do3"
-  type: trojan
-  server: dns.google.do3.kitu.xyz
+- name: "27septvault"
+  server: dns.google.vultr.xv2.xyz
   port: 443
-  password: whyvpn-xusazsz
-  udp: true
+  type: vmess
+  uuid: 000c5b70-8588-49f1-9141-81cbae741b1f
   sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
+  alterId: 0
+  cipher: auto
+  tls: true
   skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /xvmess
+   headers:
+    Host: mobilelegends.com
 
 - name: "Do1"
   type: trojan
@@ -41,7 +46,7 @@ proxies:
   port: 443
   type: vmess
   uuid: c96119ca-4682-4150-a2f1-234d50b68dff
-  sni: mm.net.my
+  sni: mobilelegends.com
   alterId: 0
   cipher: auto
   tls: true
@@ -58,7 +63,7 @@ proxies:
   port: 443
   type: vmess
   uuid: 5e30da99-9cd3-4e53-8971-03e5e9e6d23a
-  sni: mm.net.my
+  sni: mobilelegends.com
   alterId: 0
   cipher: auto
   tls: true
