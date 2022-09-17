@@ -1,5 +1,17 @@
 proxies:
 
+- name: "artun23"
+  type: trojan
+  server: dns.google.sg.premium2.artunnel57.host
+  port: 8000
+  password: trojan_tcp_tls
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
 - name: "RaceA"
   type: trojan
   server: dns.google.sg-full.privateip.net
