@@ -3,7 +3,7 @@ proxies:
   type: trojan
   server: ulist.com.my.ab.gadennyc.cloudns.nz
   port: 443
-  password: jupitervpn-mutygff
+  password: jupitervpn-munviuy
   udp: true
   sni: mm.net.my
   alpn:
@@ -15,7 +15,7 @@ proxies:
   type: trojan
   server: ulist.com.my.ac.gadennyc.cloudns.nz
   port: 443
-  password: jupitervpn-shainyts
+  password: jupitervpn-colbytc
   udp: true
   sni: mm.net.my
   alpn:
