@@ -13,24 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-merduaz
-   headers:
-    Host: mm.net.my
-
-- name: "VSM2"
-  server: ulist.com.my.vsmt.banutt.cloudns.nz
-  port: 443
-  type: vmess
-  uuid: eead95f8-cb1f-4045-98bc-29d67e6b3541
-  sni: mm.net.my
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-   path: /vpnstunnel/
+   path: /u/opentunnel.net-calbont
    headers:
     Host: mm.net.my
 
@@ -67,3 +50,37 @@ proxies:
    path: /fastssh
    headers:
     Host: mm.net.my
+
+- name: "backserversk2-22oct"
+  server: ulist.com.my.sk2.merutd.cloudns.nz
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /sshkit/1074999023/632b4449ddc07/
+   headers:
+    Host: mm.net.my
+
+- name: "backserversk3-22oct"
+  server: ulist.com.my.sk3.merutd.cloudns.nz
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /sshkit/1074999023/632b43a76c35e/
+   headers:
+    Host: mobilelegends.com
