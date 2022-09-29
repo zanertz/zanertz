@@ -4,7 +4,7 @@ proxies:
   server: my.v2-ray.com
   port: 443
   type: vmess
-  uuid: bb4b9e95-c9ff-411c-9a47-483570e169aa
+  uuid: f4f7252a-7100-48e7-a2e5-b0334e845c06
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
@@ -13,6 +13,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /fastssh/inunnb/632b421749135/
+   path: /fastssh/vfvdza/6334edb31b746/
    headers:
     Host: mobilelegends.com
