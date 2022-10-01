@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-calbont
+   path: /u/opentunnel.net-carbimals
    headers:
     Host: mm.net.my
 
@@ -21,7 +21,7 @@ proxies:
   server: my.v2-ray.com
   port: 443
   type: vmess
-  uuid: 2ef64dc8-ca3c-45b8-ad5f-20871452143b
+  uuid: afef92d5-b5b9-46aa-a982-3914fe62c1c5
   sni: mm.net.my
   alterId: 0
   cipher: auto
@@ -30,7 +30,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /fastssh/nnuhgki/63298f7a97370/
+   path: /fastssh/vermadazx/6338760a4e387/
    headers:
     Host: mm.net.my
 
@@ -38,7 +38,7 @@ proxies:
   server: ulist.com.my.dynamic-sg2b.obfs.xyz
   port: 443
   type: vmess
-  uuid: 9dd120f2-d06e-41d0-a5a1-73fbe26640ea
+  uuid: 44fdb4b9-091d-4ab2-a66b-6842214d8969
   sni: mm.net.my
   alterId: 0
   cipher: auto
