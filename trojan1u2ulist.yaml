@@ -1,22 +1,10 @@
 proxies:
 
-- name: "artun23"
-  type: trojan
-  server: ulist.com.my.sg.premium2.artunnel57.host
-  port: 8000
-  password: trojan_tcp_tls
-  udp: true
-  sni: mm.net.my
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 - name: "RaceA"
   type: trojan
   server: ulist.com.my.sg-full.privateip.net
   port: 443
-  password: 26358ac3-0037-4f30-bee7-e5f31b7bb2cf
+  password: 8f0d6103-4ad2-4bdf-85e1-4cf42e720ee6
   udp: true
   sni: mm.net.my
   alpn:
@@ -28,7 +16,7 @@ proxies:
   type: trojan
   server: ulist.com.my.sg2-full.privateip.net
   port: 443
-  password: 9c247891-3f1e-4f98-b384-d44b4e22a1e1
+  password: c4e5d193-bf8b-46c6-88ad-17818e5b5c8a
   udp: true
   sni: mm.net.my
   alpn:
