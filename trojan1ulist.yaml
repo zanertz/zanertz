@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: ulist.com.my.do1.kitu.xyz
   port: 443
-  password: whyvpn-maktirdsz
+  password: whyvpn-molikuhcp
   udp: true
   sni: mm.net.my
   alpn:
@@ -16,7 +16,7 @@ proxies:
   type: trojan
   server: ulist.com.my.do2.kitu.xyz
   port: 443
-  password: whyvpn-cuvupolis
+  password: whyvpn-lubunbcy
   udp: true
   sni: mm.net.my
   alpn:
@@ -28,7 +28,7 @@ proxies:
   type: trojan
   server: ulist.com.my.do3.kitu.xyz
   port: 443
-  password: whyvpn-lopioijas
+  password: whyvpn-nununhgoizz
   udp: true
   sni: mm.net.my
   alpn:
@@ -41,23 +41,6 @@ proxies:
   port: 443
   type: vmess
   uuid: c96119ca-4682-4150-a2f1-234d50b68dff
-  sni: mm.net.my
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-   path: /vpnstunnel/
-   headers:
-    Host: mm.net.my
-
-- name: "VSM2"
-  server: v-2.sshcf.xyz
-  port: 443
-  type: vmess
-  uuid: 5e30da99-9cd3-4e53-8971-03e5e9e6d23a
   sni: mm.net.my
   alterId: 0
   cipher: auto

@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-carbimals
+   path: /u/opentunnel.net-mumuijgvv
    headers:
     Host: mm.net.my
 
