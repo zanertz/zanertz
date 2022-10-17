@@ -4,7 +4,7 @@ proxies:
   server: my.v2-ray.com
   port: 443
   type: vmess
-  uuid: a9481600-ef36-402a-a0e5-5547bfd7b87c
+  uuid: e715caca-c520-4388-bfc0-09707170867a
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
@@ -13,6 +13,23 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /fastssh/gufuggdas/633de2ef08fb2/
+   path: /fastssh/mmmkhguu/633de2ef08fb2/
+   headers:
+    Host: mobilelegends.com
+
+- name: "backserverjantit"
+  server: my3.vpnjantit.com
+  port: 443
+  type: vmess
+  uuid: 71e1ae3e-4e6e-11ed-ac8c-00163e004ee0
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: 
    headers:
     Host: mobilelegends.com
