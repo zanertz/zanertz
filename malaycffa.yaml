@@ -30,6 +30,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: 
+   path: /vpnjantit
    headers:
     Host: mobilelegends.com
