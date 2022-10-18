@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-mumuijgvv
+   path: /u/opentunnel.net-nunujgciu
    headers:
     Host: mm.net.my
 
@@ -35,10 +35,10 @@ proxies:
     Host: mm.net.my
 
 - name: "backserver2"
-  server: ulist.com.my.dynamic-sg1b.obfs.xyz
+  server: ulist.com.my.dynamic-sg2b.obfs.xyz
   port: 443
   type: vmess
-  uuid: a8cf90c8-6133-4f7c-836a-0394e636f557
+  uuid: 70512e7c-aa62-443a-aed6-a83bc43f3ceb
   sni: mm.net.my
   alterId: 0
   cipher: auto
