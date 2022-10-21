@@ -18,10 +18,10 @@ proxies:
     Host: mobilelegends.com
 
 - name: "backserverjantit"
-  server: my3.vpnjantit.com
-  port: 443
+  server: my2.vpnjantit.com
+  port: 10001
   type: vmess
-  uuid: 71e1ae3e-4e6e-11ed-ac8c-00163e004ee0
+  uuid: 37b31004-50d5-11ed-8ea9-00163e005b89
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
