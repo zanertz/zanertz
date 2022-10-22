@@ -35,10 +35,10 @@ proxies:
     Host: mm.net.my
 
 - name: "backserver2"
-  server: ulist.com.my.dynamic-sg2b.obfs.xyz
+  server: ulist.com.my.dynamic-sg3b.obfs.xyz
   port: 443
   type: vmess
-  uuid: 70512e7c-aa62-443a-aed6-a83bc43f3ceb
+  uuid: c7f5eaa2-1022-444c-89f8-6751f7d3cd1d
   sni: mm.net.my
   alterId: 0
   cipher: auto
