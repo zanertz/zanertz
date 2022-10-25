@@ -51,7 +51,7 @@ proxies:
    headers:
     Host: mobilelegends.com
 
-- name: "backserversk2-22oct"
+- name: "backserversk2-24nov"
   server: dns.google.sk2.merutd.cloudns.nz
   port: 443
   type: vmess
@@ -64,11 +64,11 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/632b4449ddc07/
+   path: /sshkit/1074999023/6357906a79718/
    headers:
     Host: mobilelegends.com
 
-- name: "backserversk3-22oct"
+- name: "backserversk3-24nov"
   server: dns.google.sk3.merutd.cloudns.nz
   port: 443
   type: vmess
@@ -81,6 +81,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/632b43a76c35e/
+   path: /sshkit/1074999023/635790a0b695d/
    headers:
     Host: mobilelegends.com
