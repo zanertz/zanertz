@@ -1,17 +1,5 @@
 proxies:
 
-- name: "RaceA"
-  type: trojan
-  server: dns.google.sg-full.privateip.net
-  port: 443
-  password: 10ea0463-8393-4b4d-89c0-4e96eafa246c
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 - name: "RaceB"
   type: trojan
   server: dns.google.sg2-full.privateip.net
@@ -26,13 +14,42 @@ proxies:
 
 - name: "freevmessT"
   type: trojan
-  server: dns.google.fvm.merutd.cloudns.nz
+  server: dns.google.sg-freevmess.privateip.net
   port: 443
-  password: f049093c-50e7-4f9b-b0bd-b0ffff8f4302
+  password: ec7fe126-ac79-4ea1-b28d-5795d85b70f0
   udp: true
   sni: mobilelegends.com
   alpn:
      - h2
      - http/1.1
   skip-cert-verify: true
+
+- name: "RaceA"
+  type: trojan
+  server: dns.google.sg-full.privateip.net
+  port: 443
+  password: 6e57486b-06a6-43d3-a679-c8d69a56edae
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "backserver"
+  server: dns.google.sgv-3.openv2ray.com
+  port: 443
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /u/opentunnel.net-uslefx8
+   headers:
+    Host: mobilelegends.com
 
