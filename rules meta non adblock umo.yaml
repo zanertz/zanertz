@@ -102,7 +102,6 @@ proxy-groups:
   lazy: false
   use:
   - trojan1u
-  - trojan1u2
 - name: Pingb
   type: url-test
   url: 'https://duckduckgo.com/'
@@ -111,7 +110,6 @@ proxy-groups:
   lazy: false
   use:
   - trojan1u2
-  - trojan1u
 - name: FallbackLBrb
   type: load-balance
   url: 'https://duckduckgo.com/'
@@ -160,7 +158,6 @@ proxy-groups:
   lazy: false
   use:
   - trojan1u
-  - trojan1u2
 - name: Pinglb2
   type: url-test
   url: 'https://duckduckgo.com/'
@@ -168,7 +165,6 @@ proxy-groups:
   tolerance: 1200
   lazy: false
   use:
-  - trojan1u
   - trojan1u2
 - name: FallbackXch
   type: fallback
