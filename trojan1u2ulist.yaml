@@ -12,6 +12,42 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
+- name: "Do4"
+  type: trojan
+  server: ulist.com.my.do4.kitu.xyz
+  port: 443
+  password: whyvpn-efuhzyvv
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "Do5"
+  type: trojan
+  server: ulist.com.my.do5.kitu.xyz
+  port: 443
+  password: whyvpn-fermiugdx
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "Do6"
+  type: trojan
+  server: ulist.com.my.do6.kitu.xyz
+  port: 443
+  password: whyvpn-eteruyhv
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
 - name: "freevmessT"
   type: trojan
   server: ulist.com.my.sg-freevmess.privateip.net
