@@ -38,7 +38,7 @@ proxies:
 
 - name: "Do3"
   type: trojan
-  server: dns.google.do2.kitu.xyz
+  server: dns.google.do3.kitu.xyz
   port: 443
   password: whyvpn-octanrxv
   udp: true
