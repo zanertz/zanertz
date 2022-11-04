@@ -101,6 +101,7 @@ proxy-groups:
   tolerance: 1200
   lazy: false
   use:
+  - trojan1u2
   - trojan1u
 - name: Pingb
   type: url-test
@@ -109,6 +110,7 @@ proxy-groups:
   tolerance: 1200
   lazy: false
   use:
+  - trojan1u
   - trojan1u2
 - name: FallbackLBrb
   type: load-balance
@@ -157,6 +159,7 @@ proxy-groups:
   tolerance: 1200
   lazy: false
   use:
+  - trojan1u2
   - trojan1u
 - name: Pinglb2
   type: url-test
@@ -165,6 +168,7 @@ proxy-groups:
   tolerance: 1200
   lazy: false
   use:
+  - trojan1u
   - trojan1u2
 - name: FallbackXch
   type: fallback

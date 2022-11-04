@@ -1,17 +1,5 @@
 proxies:
 
-- name: "RaceB"
-  type: trojan
-  server: ulist.com.my.sg2-full.privateip.net
-  port: 443
-  password: de93012c-9424-4fc9-b6d2-81375e568c00
-  udp: true
-  sni: mm.net.my
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 - name: "Do4"
   type: trojan
   server: ulist.com.my.do4.kitu.xyz

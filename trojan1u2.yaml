@@ -1,17 +1,5 @@
 proxies:
 
-- name: "RaceB"
-  type: trojan
-  server: dns.google.sg2-full.privateip.net
-  port: 443
-  password: de93012c-9424-4fc9-b6d2-81375e568c00
-  udp: true
-  sni: mobilelegends.com
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 - name: "Do4"
   type: trojan
   server: dns.google.do4.kitu.xyz
