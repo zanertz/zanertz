@@ -1,0 +1,321 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+mixed-port: 7894
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: folder
+interface-name: en0
+dns:
+  enable: true
+  listen: 0.0.0.0:53
+  default-nameserver:
+    - 1.1.1.1
+    - 1.0.0.1
+  nameserver:
+    - https://dns.controld.com/1s688mgbded/lenovoista
+    - tls://1s688mgbded-lenovoista.dns.controld.com:853
+  fallback:
+    - tcp://1.1.1.1
+    - tcp://1.0.0.1
+  dns-hijack:
+    - tcp://1.1.1.1
+    - tcp://1.0.0.1
+
+proxy-groups: 
+- name: All 
+  type: select
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  proxies:
+  - Ping++
+  - Ping++mix
+  - PingLB++rb
+  - PingLB++ch
+  - Fallback
+  - FallbackLBrb
+  - FallbackLBch
+  - PingLBXrb
+  - PingLBXch
+  - FallbackXrb
+  - FallbackXch
+  - Manual
+- name: Manual 
+  type: select
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  use:
+  - trojan1u
+  - trojan1u2
+  - trojan2u
+  - backupu
+- name: Manual1
+  type: select
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  use:
+  - trojan1u
+  - trojan1u2
+  - trojan2u
+  - backupu
+- name: Manual2
+  type: select
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  use:
+  - trojan1u
+  - trojan1u2
+  - trojan2u
+  - backupu
+- name: Ping++
+  type: url-test
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  tolerance: 1000
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+  - backupu
+  - trojan2u
+- name: Ping++mix
+  type: url-test
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  tolerance: 1000
+  lazy: false
+  proxies:
+  - Manual1
+  - Manual2
+  - Pinga
+  - Pingb
+  - Fallback
+- name: Pinga
+  type: url-test
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  tolerance: 1000
+  lazy: false
+  use:
+  - trojan1u2
+  - trojan1u
+- name: Pingb
+  type: url-test
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  tolerance: 1000
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+- name: FallbackLBrb
+  type: load-balance
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  strategy: round-robin
+  disable-udp: false
+  lazy: false
+  proxies:
+  - Fallback
+  - Fallback2
+- name: FallbackLBch
+  type: load-balance
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  strategy: consistent-hashing
+  disable-udp: false
+  lazy: false
+  proxies:
+  - Fallback
+  - Fallback2
+- name: PingLB++ch
+  type: load-balance
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  strategy: consistent-hashing
+  disable-udp: false
+  lazy: false
+  proxies:
+  - Pinglb
+  - Pinglb2
+- name: PingLB++rb
+  type: load-balance
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  strategy: round-robin
+  disable-udp: false
+  lazy: false
+  proxies:
+  - Pinglb
+  - Pinglb2
+- name: Pinglb
+  type: url-test
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  tolerance: 1000
+  lazy: false
+  use:
+  - trojan1u2
+  - trojan1u
+- name: Pinglb2
+  type: url-test
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  tolerance: 1000
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+- name: FallbackXch
+  type: fallback
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  lazy: false
+  proxies:
+  - FallbackLBch
+  - BackupV
+  - BackupX
+- name: FallbackXrb
+  type: fallback
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  lazy: false
+  proxies:
+  - FallbackLBrb
+  - BackupV
+  - BackupX
+- name: PingLBXch
+  type: fallback
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  lazy: false
+  proxies:
+  - PingLB++ch
+  - BackupV
+  - BackupX
+- name: PingLBXrb
+  type: fallback
+  url: 'https://duckduckgo.com/'
+  interval: 10
+  lazy: false
+  proxies:
+  - PingLB++rb
+  - BackupV
+  - BackupX
+- name: Fallback
+  type: fallback
+  url: 'https://duckduckgo.com/'
+  lazy: false
+  interval: 10
+  proxies:
+  - Manual1
+  - Manual2
+  - Pinga
+  - Pingb
+  - BackupV
+- name: Fallback2
+  type: fallback
+  url: 'https://duckduckgo.com/'
+  lazy: false
+  interval: 10
+  proxies:
+  - Manual1
+  - Manual2
+  - Pinga
+  - Pingb
+  - BackupV
+- name: BackupV
+  type: fallback
+  url: 'https://duckduckgo.com/'
+  lazy: false
+  interval: 10
+  use:
+  - trojan1u
+  - trojan1u2
+- name: BackupX
+  type: fallback
+  url: 'https://duckduckgo.com/'
+  lazy: false
+  interval: 10
+  use:
+  - backupu
+  - trojan2u
+
+proxy-providers:
+  trojan1u:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/trojan1u.yaml"
+    interval: 120
+    path: ./trojan1u.yaml
+    health-check:
+      enable: true
+      interval: 58
+      # lazy: false
+      url: https://duckduckgo.com/
+
+  trojan1u2:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/trojan1u2.yaml"
+    interval: 131
+    path: ./trojan1u2.yaml
+    health-check:
+      enable: true
+      interval: 62
+      lazy: false
+      url: https://duckduckgo.com/
+
+  trojan2u:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/trojan2u.yaml"
+    interval: 345
+    path: ./trojan2u.yaml
+    health-check:
+      enable: true
+      interval: 65
+      lazy: false
+      url: https://duckduckgo.com/
+
+  backupu:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/backupu.yaml"
+    interval: 321
+    path: ./backupu.yaml
+    health-check:
+      enable: true
+      interval: 72
+      lazy: false
+      url: https://duckduckgo.com/
+
+
+rules:
+  - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,REJECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,REJECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  - IP-CIDR6,fc00::/7,REJECT,no-resolve
+  - IP-CIDR6,fe80::/10,REJECT,no-resolve
+  - IP-CIDR6,fd00::/8,REJECT,no-resolve
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - DOMAIN,analytics.google.com,REJECT
+  - DOMAIN,analyticsinsights-pa.googleapis.com,REJECT
+  - DOMAIN,analyticsreporting.googleapis.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,analysis,REJECT
+  - SRC-IP-CIDR,192.168.1.201/32,REJECT
+  - IP-CIDR,198.18.0.1/16,REJECT,REJECT
+  - GEOIP,IR,REJECT
+  - MATCH,All
