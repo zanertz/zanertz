@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-vermand43
+   path: /u/opentunnel.net-buszcsopl
    headers:
     Host: mobilelegends.com
 
@@ -30,7 +30,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /fastssh/vermadazx/6338760a4e387/
+   path: /fastssh/mumuhsgzsaop/636a93438fb71/
    headers:
     Host: mobilelegends.com
 
