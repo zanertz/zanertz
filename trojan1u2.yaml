@@ -28,7 +28,7 @@ proxies:
   type: trojan
   server: dns.google.do6.kitu.xyz
   port: 443
-  password: whyvpn-futydsza
+  password: whyvpn-futydszaxxx
   udp: true
   sni: mobilelegends.com
   alpn:
