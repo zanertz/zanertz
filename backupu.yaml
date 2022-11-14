@@ -38,7 +38,7 @@ proxies:
   server: dns.google.dynamic-sg3b.obfs.xyz
   port: 443
   type: vmess
-  uuid: c7f5eaa2-1022-444c-89f8-6751f7d3cd1d
+  uuid: 5c1ae3be-8857-4808-aa0c-b85a544fb5ba
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
@@ -47,7 +47,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /fastssh
+   path: /worryfree
    headers:
     Host: mobilelegends.com
 
