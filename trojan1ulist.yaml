@@ -28,7 +28,7 @@ proxies:
   type: trojan
   server: ulist.com.my.do2.kitu.xyz
   port: 443
-  password: whyvpn-mesddasz
+  password: whyvpn-cartydsz
   udp: true
   sni: mm.net.my
   alpn:
