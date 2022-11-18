@@ -21,7 +21,7 @@ proxies:
   server: my.v2-ray.com
   port: 443
   type: vmess
-  uuid: afef92d5-b5b9-46aa-a982-3914fe62c1c5
+  uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee
   sni: mm.net.my
   alterId: 0
   cipher: auto
@@ -30,7 +30,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /fastssh/mumuhsgzsaop/636a93438fb71/
+   path: /fastssh/sukygcxx/6377ba0aeec4a/
    headers:
     Host: mm.net.my
 
