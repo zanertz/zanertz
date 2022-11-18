@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /fastssh/fhswdjdzz/636e8cde28183/
+   path: /fastssh/hornetsed/6377bec763a30/
    headers:
     Host: mobilelegends.com
 
