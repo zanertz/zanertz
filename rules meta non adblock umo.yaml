@@ -50,7 +50,7 @@ proxy-groups:
   url: 'https://duckduckgo.com'
   interval: 6
   tolerance: 300
-  lazy: false
+  lazy: true
   proxies:
   - PingLB++rb
   - PingLB++rb2
@@ -107,7 +107,7 @@ proxy-groups:
   url: 'https://duckduckgo.com'
   interval: 15
   tolerance: 300
-  lazy: false
+  lazy: true
   use:
   - trojan1u2
   - trojan1u
@@ -116,7 +116,7 @@ proxy-groups:
   url: 'https://duckduckgo.com'
   interval: 15
   tolerance: 300
-  lazy: false
+  lazy: true
   use:
   - trojan1u
   - trojan1u2
