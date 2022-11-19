@@ -45,6 +45,16 @@ proxy-groups:
   - FallbackXrb
   - FallbackXch
   - Manual
+- name: PingLBXFinal
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 6
+  tolerance: 300
+  lazy: false
+  proxies:
+  - PingLB++rb
+  - PingLB++rb2
+  - BackupX
 - name: Manual 
   type: select
   url: 'https://duckduckgo.com'
@@ -72,6 +82,62 @@ proxy-groups:
   - trojan1u2
   - trojan2u
   - backupu
+- name: PingLB++rb
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  interval: 6
+  strategy: round-robin
+  disable-udp: false
+  tolerance: 600
+  proxies:
+  - Pinglb
+  - Pinglb2
+- name: PingLB++rb2
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  interval: 12
+  strategy: round-robin
+  disable-udp: false
+  tolerance: 1200
+  proxies:
+  - Pinglbx
+  - Pinglb2x
+- name: Pinglb
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 15
+  tolerance: 300
+  lazy: false
+  use:
+  - trojan1u2
+  - trojan1u
+- name: Pinglb2
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 15
+  tolerance: 300
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+- name: Pinglbx
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 60
+  tolerance: 2000
+  lazy: false
+  use:
+  - trojan1u2
+  - trojan1u
+- name: Pinglb2x
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 60
+  tolerance: 2000
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
 - name: Ping++
   type: url-test
   url: 'https://duckduckgo.com'
@@ -143,44 +209,6 @@ proxy-groups:
   proxies:
   - Pinglb
   - Pinglb2
-- name: PingLB++rb
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 12
-  strategy: round-robin
-  disable-udp: false
-  tolerance: 1000
-  proxies:
-  - Pinglb
-  - Pinglb2
-- name: PingLB++rb2
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 12
-  strategy: round-robin
-  disable-udp: false
-  tolerance: 1000
-  proxies:
-  - Pinglb
-  - Pinglb2
-- name: Pinglb
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 12
-  tolerance: 1200
-  lazy: false
-  use:
-  - trojan1u2
-  - trojan1u
-- name: Pinglb2
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 12
-  tolerance: 1200
-  lazy: false
-  use:
-  - trojan1u
-  - trojan1u2
 - name: FallbackXch
   type: fallback
   url: 'https://duckduckgo.com'
@@ -217,16 +245,6 @@ proxy-groups:
   - PingLB++rb
   - BackupV
   - BackupX
-- name: PingLBXFinal
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 6
-  tolerance: 600
-  lazy: true
-  proxies:
-  - PingLB++rb
-  - PingLB++rb2
-  - BackupX
 - name: Fallback
   type: fallback
   url: 'https://duckduckgo.com'
@@ -258,10 +276,11 @@ proxy-groups:
   - trojan1u
   - trojan1u2
 - name: BackupX
-  type: fallback
+  type: url-test
   url: 'https://duckduckgo.com'
-  tolerance: 1000
-  interval: 10
+  interval: 15
+  tolerance: 500
+  lazy: false
   use:
   - backupu
   - trojan2u
