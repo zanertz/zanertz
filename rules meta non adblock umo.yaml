@@ -46,11 +46,10 @@ proxy-groups:
   - FallbackXch
   - Manual
 - name: PingLBXFinal
-  type: url-test
+  type: fallback
   url: 'https://duckduckgo.com'
-  interval: 6
+  interval: 12
   tolerance: 300
-  lazy: true
   proxies:
   - PingLB++rb
   - PingLB++rb2
