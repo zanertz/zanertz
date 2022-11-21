@@ -51,12 +51,12 @@ proxies:
    headers:
     Host: mm.net.my
 
-- name: "backserversk2-24nov"
-  server: ulist.com.my.sk2.merutd.cloudns.nz
+- name: "backserversk1-22dec"
+  server: ulist.com.my.sk1.merutd.cloudns.nz
   port: 443
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  sni: mobilelegends.com
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -64,16 +64,16 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/6357906a79718/
+   path: /sshkit/1074999023/637be2234ba44/
    headers:
     Host: mm.net.my
 
-- name: "backserversk3-24nov"
-  server: ulist.com.my.sk3.merutd.cloudns.nz
+- name: "backserversk4-22dec"
+  server: ulist.com.my.sk4.merutd.cloudns.nz
   port: 443
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
-  sni: mobilelegends.com
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -81,6 +81,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/635790a0b695d/
+   path: /sshkit/1074999023/637be26398044/
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
