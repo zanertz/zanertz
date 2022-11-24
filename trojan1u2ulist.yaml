@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: ulist.com.my.do4.kitu.xyz
   port: 443
-  password: whyvpn-colkijugnn
+  password: whyvpn-odsvinjzx
   udp: true
   sni: mm.net.my
   alpn:
@@ -16,7 +16,7 @@ proxies:
   type: trojan
   server: ulist.com.my.do5.kitu.xyz
   port: 443
-  password: whyvpn-cannugcvxx
+  password: whyvpn-okxsnizlo
   udp: true
   sni: mm.net.my
   alpn:
@@ -52,7 +52,7 @@ proxies:
   type: trojan
   server: ulist.com.my.sg-full.privateip.net
   port: 443
-  password: fb7af1d1-425a-46e9-8f5a-618beb8649ff
+  password: 01d1e392-f437-4006-94fb-63291cef13f9
   udp: true
   sni: mm.net.my
   alpn:
