@@ -61,6 +61,8 @@ proxy-groups:
   url: 'https://duckduckgo.com'
   strategy: round-robin
   disable-udp: false
+  interval: 30
+  tolerance: 600
   lazy: false
   proxies:
   - PingLB++ch
