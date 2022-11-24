@@ -59,10 +59,8 @@ proxy-groups:
 - name: PingLBXFinalch
   type: load-balance
   url: 'https://duckduckgo.com'
-  interval: 60
-  strategy: consistent-hashing
+  strategy: round-robin
   disable-udp: false
-  tolerance: 600
   lazy: false
   proxies:
   - PingLB++ch
