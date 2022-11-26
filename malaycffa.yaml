@@ -4,7 +4,7 @@ proxies:
   server: my.v2-ray.com
   port: 443
   type: vmess
-  uuid: a9481600-ef36-402a-a0e5-5547bfd7b87c
+  uuid: 9dc0c6aa-39a1-46be-9938-85999e3c3498
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /fastssh/hornetsed/6377bec763a30/
+   path: /fastssh/mukufdsx/63815a5bc83a7/
    headers:
     Host: mobilelegends.com
 
@@ -21,7 +21,7 @@ proxies:
   server: my2.vpnjantit.com
   port: 10001
   type: vmess
-  uuid: 9fe31d62-57c5-11ed-8c69-00163e005b89
+  uuid: 07684006-6d20-11ed-976f-00163e005b89
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
