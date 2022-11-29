@@ -61,8 +61,8 @@ proxy-groups:
   url: 'https://duckduckgo.com'
   strategy: consistent-hashing
   disable-udp: false
-  interval: 30
-  tolerance: 600
+  interval: 15
+  tolerance: 150
   lazy: false
   proxies:
   - PingLB++ch
@@ -119,10 +119,10 @@ proxy-groups:
 - name: PingLB++ch
   type: load-balance
   url: 'https://duckduckgo.com'
-  interval: 60
+  interval: 30
   strategy: consistent-hashing
   disable-udp: false
-  tolerance: 600
+  tolerance: 300
   lazy: false
   proxies:
   - Pinglb
@@ -130,10 +130,10 @@ proxy-groups:
 - name: PingLB++ch2
   type: load-balance
   url: 'https://duckduckgo.com'
-  interval: 60
+  interval: 30
   strategy: consistent-hashing
   disable-udp: false
-  tolerance: 600
+  tolerance: 300
   lazy: false
   proxies:
   - Pinglb2
@@ -141,7 +141,7 @@ proxy-groups:
 - name: Pinglb
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 60
+  interval: 30
   tolerance: 300
   lazy: false
   use:
@@ -152,7 +152,7 @@ proxy-groups:
 - name: Pinglb2
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 60
+  interval: 30
   tolerance: 300
   lazy: false
   use:
@@ -163,7 +163,7 @@ proxy-groups:
 - name: Pinglbx
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 60
+  interval: 30
   tolerance: 600
   lazy: false
   use:
@@ -172,7 +172,7 @@ proxy-groups:
 - name: Pinglb2x
   type: url-test
   url: 'https://duckduckgo.com'
-  interval: 60
+  interval: 30
   tolerance: 600
   lazy: false
   use:

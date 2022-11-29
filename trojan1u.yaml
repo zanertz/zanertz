@@ -28,7 +28,7 @@ proxies:
   type: trojan
   server: dns.google.do2.kitu.xyz
   port: 443
-  password: whyvpn-octrosxv
+  password: whyvpn-osedreaz
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -48,11 +48,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "VSM1"
-  server: v-1.sshcf.xyz
+- name: "VSM2"
+  server: v-2.unifi.my.id
   port: 443
   type: vmess
-  uuid: c96119ca-4682-4150-a2f1-234d50b68dff
+  uuid: d731288a-19db-49d4-93a7-c8f73ed28c4c
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
@@ -61,6 +61,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /vpnstunnel/
+   path: /worryfree/
    headers:
     Host: mobilelegends.com
