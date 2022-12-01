@@ -17,7 +17,6 @@ dns:
     - 9.9.9.9
     - 149.112.112.112
   nameserver:
-    - https://dns.controld.com/1ghwuz1l09n
     - https://dns.quad9.net/dns-query
   fallback:
     - tcp://9.9.9.9
