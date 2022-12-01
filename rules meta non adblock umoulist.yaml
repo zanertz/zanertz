@@ -19,8 +19,6 @@ dns:
   nameserver:
     - https://dns.controld.com/1ghwuz1l09n
     - https://dns.quad9.net/dns-query
-    - tls://1ghwuz1l09n.dns.controld.com:853
-    - tls://dns.quad9.net:853
   fallback:
     - tcp://9.9.9.9
     - tcp://149.112.112.112
