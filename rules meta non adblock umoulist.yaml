@@ -17,8 +17,7 @@ dns:
     - 9.9.9.9
     - 149.112.112.112
   nameserver:
-    - https://dns.controld.com/1ghwuz1l09n
-    - tls://dns.quad9.net:853
+    - tls://1ghwuz1l09n-s1malay.dns.controld.com:853
   fallback:
     - tcp://9.9.9.9
     - tcp://149.112.112.112
