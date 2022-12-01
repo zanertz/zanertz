@@ -15,15 +15,11 @@ dns:
   listen: 0.0.0.0:53
   default-nameserver:
     - 9.9.9.9
-    - 149.112.112.112
   nameserver:
-    - https://dns.quad9.net/dns-query
+    - 9.9.9.9
+    - https://dns.controld.com/1ghwuz1l09n/autowr
   fallback:
     - tcp://9.9.9.9
-    - tcp://149.112.112.112
-  dns-hijack:
-    - tcp://9.9.9.9
-    - tcp://149.112.112.112
 
 proxy-groups: 
 - name: All 
