@@ -16,8 +16,8 @@ dns:
   default-nameserver:
     - 9.9.9.9
   nameserver:
-    - https://dns.controld.com/1ghwuz1l09n/autowr
     - https://freedns.controld.com/p2
+    - https://dns.controld.com/1ghwuz1l09n/autowr
   fallback:
     - tcp://9.9.9.9
 
