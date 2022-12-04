@@ -16,7 +16,7 @@ proxies:
   type: trojan
   server: ulist.com.my.do1.kitu.xyz
   port: 443
-  password: whyvpn-condalts
+  password: whyvpn-condalta
   udp: true
   sni: mm.net.my
   alpn:
@@ -28,7 +28,7 @@ proxies:
   type: trojan
   server: ulist.com.my.do2.kitu.xyz
   port: 443
-  password: whyvpn-wurdtdsz
+  password: whyvpn-wurdtdsa
   udp: true
   sni: mm.net.my
   alpn:

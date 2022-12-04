@@ -16,7 +16,7 @@ proxies:
   type: trojan
   server: dns.google.do1.kitu.xyz
   port: 443
-  password: whyvpn-condalts
+  password: whyvpn-condalta
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -28,7 +28,7 @@ proxies:
   type: trojan
   server: dns.google.do2.kitu.xyz
   port: 443
-  password: whyvpn-wurdtdsz
+  password: whyvpn-wurdtdsd
   udp: true
   sni: mobilelegends.com
   alpn:
