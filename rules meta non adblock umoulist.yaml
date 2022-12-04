@@ -16,8 +16,8 @@ dns:
   default-nameserver:
     - 9.9.9.9
   nameserver:
+    - https://sky.rethinkdns.com/1:2B1_A7_9-PMAYAAQAAMAagBA
     - https://freedns.controld.com/p2
-    - https://dns.controld.com/1ghwuz1l09n/autowr
   fallback:
     - tcp://9.9.9.9
 
@@ -57,7 +57,7 @@ proxy-groups:
   strategy: consistent-hashing
   disable-udp: false
   interval: 15
-  tolerance: 150
+  tolerance: 1200
   lazy: false
   proxies:
   - PingLB++ch
@@ -114,10 +114,10 @@ proxy-groups:
 - name: PingLB++ch
   type: load-balance
   url: 'https://duckduckgo.com'
-  interval: 30
+  interval: 35
   strategy: consistent-hashing
   disable-udp: false
-  tolerance: 300
+  tolerance: 600
   lazy: false
   proxies:
   - Pinglb
@@ -125,10 +125,10 @@ proxy-groups:
 - name: PingLB++ch2
   type: load-balance
   url: 'https://duckduckgo.com'
-  interval: 30
+  interval: 35
   strategy: consistent-hashing
   disable-udp: false
-  tolerance: 300
+  tolerance: 600
   lazy: false
   proxies:
   - Pinglb2
@@ -137,7 +137,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 30
-  tolerance: 100
+  tolerance: 600
   lazy: false
   use:
   - trojan1u2
@@ -148,7 +148,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 30
-  tolerance: 100
+  tolerance: 600
   lazy: false
   use:
   - trojan1u
@@ -159,7 +159,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 30
-  tolerance: 200
+  tolerance: 1200
   lazy: false
   use:
   - trojan1u2
@@ -168,7 +168,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 30
-  tolerance: 200
+  tolerance: 1200
   lazy: false
   use:
   - trojan1u
