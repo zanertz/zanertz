@@ -18,7 +18,7 @@ proxies:
     Host: mobilelegends.com
 
 - name: "backservermy"
-  server: my.v2-ray.com
+  server: my.v2-ray.cop
   port: 443
   type: vmess
   uuid: dce4c472-6f3f-4c45-80e5-cbfe5ecad7ee
