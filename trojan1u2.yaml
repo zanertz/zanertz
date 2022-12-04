@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: dns.google.do4.kitu.xyz
   port: 443
-  password: whyvpn-otiaxxzp
+  password: whyvpn-otiaxxzg
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -16,7 +16,7 @@ proxies:
   type: trojan
   server: dns.google.do5.kitu.xyz
   port: 443
-  password: whyvpn-oretxzafa
+  password: whyvpn-oretxzafp
   udp: true
   sni: mobilelegends.com
   alpn:
@@ -61,7 +61,7 @@ proxies:
   skip-cert-verify: true
 
 - name: "backserver"
-  server: dns.google.sgv-3.openv2ray.com
+  server: dns.google.sgv-3.openv2ray.coo
   port: 443
   type: vmess
   uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
