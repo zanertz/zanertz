@@ -35,10 +35,10 @@ proxies:
     Host: mobilelegends.com
 
 - name: "backserver2"
-  server: dns.google.dynamic-sg3b.obfs.xyz
+  server: dns.google.dynamic-sg1b.obfs.xyz
   port: 443
   type: vmess
-  uuid: 5c1ae3be-8857-4808-aa0c-b85a544fb5ba
+  uuid: 094666b1-9c24-4abc-b86e-5f1e007037a6
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
