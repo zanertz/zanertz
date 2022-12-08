@@ -12,6 +12,20 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
+- name: "HideDo"
+  server: dns.google.2v66ge.hidessh.my.id
+  port: 443
+  type: trojan
+  password: 5d27cf48-fad3-42e1-8ba8-2aae6a10b450
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /hidessh-trojan-ws
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
 - name: "Do1"
   type: trojan
   server: dns.google.do1.kitu.xyz

@@ -12,6 +12,20 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
+- name: "HideDo"
+  server: ulist.com.my.2v66ge.hidessh.my.id
+  port: 443
+  type: trojan
+  password: 5d27cf48-fad3-42e1-8ba8-2aae6a10b450
+  skip-cert-verify: true
+  sni: mm.net.my
+  network: ws
+  ws-opts:
+   path: /hidessh-trojan-ws
+   headers:
+    Host: mm.net.my
+  udp: true
+
 - name: "Do1"
   type: trojan
   server: ulist.com.my.do1.kitu.xyz
