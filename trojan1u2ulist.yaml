@@ -40,7 +40,7 @@ proxies:
   type: trojan
   server: ulist.com.my.sg-freevmess.privateip.net
   port: 443
-  password: ec7fe126-ac79-4ea1-b28d-5795d85b70f0
+  password: f963d94d-7605-4d24-bfc0-1f7f3b2740a9
   udp: true
   sni: mm.net.my
   alpn:
