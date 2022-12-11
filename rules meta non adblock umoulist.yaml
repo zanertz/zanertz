@@ -42,15 +42,14 @@ proxy-groups:
   - FallbackXch
   - Manual
 - name: PingLBXFinal
-  type: fallback
+  type: url-test
   url: 'https://duckduckgo.com'
   interval: 15
-  tolerance: 500
+  tolerance: 1500
   lazy: false
   proxies:
   - PingLB++rb
   - PingLB++rb2
-  - BackupX
 - name: PingLBXFinalch
   type: load-balance
   url: 'https://duckduckgo.com'
@@ -92,25 +91,25 @@ proxy-groups:
 - name: PingLB++rb
   type: load-balance
   url: 'https://duckduckgo.com'
-  interval: 60
+  interval: 10
   strategy: round-robin
   disable-udp: false
   tolerance: 600
-  lazy: false
+  lazy: true
   proxies:
   - Pinglb
   - Pinglb2
 - name: PingLB++rb2
   type: load-balance
   url: 'https://duckduckgo.com'
-  interval: 120
+  interval: 10
   strategy: round-robin
   disable-udp: false
-  tolerance: 1200
-  lazy: false
+  tolerance: 600
+  lazy: true
   proxies:
-  - Pinglbx
-  - Pinglb2x
+  - Pinglb
+  - Pinglb2
 - name: PingLB++ch
   type: load-balance
   url: 'https://duckduckgo.com'
