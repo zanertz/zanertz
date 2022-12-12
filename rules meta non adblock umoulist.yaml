@@ -136,7 +136,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 30
-  tolerance: 600
+  tolerance: 300
   lazy: false
   use:
   - trojan1u2
@@ -147,7 +147,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 30
-  tolerance: 600
+  tolerance: 300
   lazy: false
   use:
   - trojan1u
@@ -158,20 +158,22 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 30
-  tolerance: 1200
+  tolerance: 300
   lazy: false
   use:
   - trojan1u2
   - trojan1u
+  - trojan2u
 - name: Pinglb2x
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 30
-  tolerance: 1200
+  tolerance: 300
   lazy: false
   use:
   - trojan1u
   - trojan1u2
+  - trojan2u
 - name: Ping++
   type: url-test
   url: 'https://duckduckgo.com'

@@ -1,5 +1,34 @@
 proxies:
 
+- name: "DynaVultr22dec.11jandns"
+  type: trojan
+  server: trojan2.udpgw.com
+  port: 443
+  password: d7723890-7a36-11ed-a888-1239d0255272
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "HowdyVultr22dec"
+  server: dns.google.dynamic-sg2b.obfs.xyz
+  port: 443
+  type: vmess
+  uuid: 67c971d5-3cbe-44f6-a24c-4165c7900f1b
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree
+   headers:
+    Host: mobilelegends.com
+
 - name: "consg2"
   type: trojan
   server: ulist.com.my.ab.gadennyc.cloudns.nz
