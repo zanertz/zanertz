@@ -12,7 +12,13 @@ external-ui: folder
 interface-name: en0
 dns:
   enable: true
-  listen: 0.0.0.0:53
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7895
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    - 240.0.0.0/4
   default-nameserver:
     - 9.9.9.9
   nameserver:
@@ -20,6 +26,40 @@ dns:
     - https://freedns.controld.com/p2
   fallback:
     - tcp://9.9.9.9
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "+.*"
+  - ntp7.*.com
+  - ntp6.*.com
+  - ntp5.*.com
+  - ntp4.*.com
+  - ntp3.*.com
+  - ntp2.*.com
+  - ntp1.*.com
+  - ntp.*.com
+  - time7.*.com
+  - time6.*.com
+  - time5.*.com
+  - time4.*.com
+  - time3.*.com
+  - time2.*.com
+  - time1.*.com
+  - time.*.apple.com
+  - time.*.edu.cn
+  - time.*.gov
+  - time.*.com
+  - "*.home.arpa"
+  - "*.local"
+  - "*.test"
+  - "*.localhost"
+  - "*.invalid"
+  - "*.example"
+  - "*.localdomain"
+  - "*.lan"
+tun:
+  enable: true
+  stack: system
+  auto-route: true
 
 proxy-groups: 
 - name: All 
