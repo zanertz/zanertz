@@ -21,11 +21,16 @@ dns:
     - 240.0.0.0/4
   default-nameserver:
     - 9.9.9.9
+    - 1.1.1.1
+    - 8.8.8.8
   nameserver:
-    - https://sky.rethinkdns.com/1:2B1_A7_9-PMAYAAQAAMAagBA
-    - https://freedns.controld.com/p2
+    - https://dns.quad9.net/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
   fallback:
     - tcp://9.9.9.9
+    - tcp://1.1.1.1
+    - tcp://8.8.8.8
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
   - "+.*"
