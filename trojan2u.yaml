@@ -25,7 +25,7 @@ proxies:
   skip-cert-verify: true
 
 - name: "backserver3do20dec"
-  server: ulist.com.my.dynamic-sg3b.obfs.xyf
+  server: ulist.com.my.dynamic-sg3b.obfs.xyz
   port: 443
   type: vmess
   uuid: 7ec06900-0c4e-4c3f-8d25-88320cdffdc9
