@@ -51,6 +51,23 @@ proxies:
    headers:
     Host: mm.net.my
 
+- name: "backserver3do20dec"
+  server: ulist.com.my.dynamic-sg3b.obfs.xyf
+  port: 443
+  type: vmess
+  uuid: 7ec06900-0c4e-4c3f-8d25-88320cdffdc9
+  sni: mm.net.my
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree
+   headers:
+    Host: mm.net.my
+
 - name: "backserversk1-22dec"
   server: ulist.com.my.sk1-dns.whyssh.my.id
   port: 443
