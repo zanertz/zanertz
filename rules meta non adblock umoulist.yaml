@@ -153,8 +153,8 @@ proxy-groups:
   tolerance: 600
   lazy: false
   proxies:
-  - Pinglb
-  - Pinglb2
+  - Pinglbx
+  - Pinglb2x
 - name: PingLB++ch
   type: load-balance
   url: 'https://duckduckgo.com'

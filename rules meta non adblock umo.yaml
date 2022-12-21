@@ -153,8 +153,8 @@ proxy-groups:
   tolerance: 600
   lazy: false
   proxies:
-  - Pinglb
-  - Pinglb2
+  - Pinglbx
+  - Pinglb2x
 - name: PingLB++ch
   type: load-balance
   url: 'https://duckduckgo.com'
@@ -203,7 +203,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 22
-  tolerance: 220
+  tolerance: 420
   lazy: false
   use:
   - trojan1u2
@@ -214,7 +214,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 22
-  tolerance: 220
+  tolerance: 420
   lazy: false
   use:
   - trojan1u
