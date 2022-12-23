@@ -1,0 +1,402 @@
+port: 7890
+socks-port: 7891
+redir-port: 7892
+tproxy-port: 7893
+mixed-port: 7894
+allow-lan: true
+mode: rule
+log-level: info
+ipv6: false
+external-controller: 127.0.0.1:9090
+external-ui: folder
+interface-name: en0
+dns:
+  enable: true
+  ipv6: false
+  enhanced-mode: fake-ip
+  listen: 0.0.0.0:7895
+  fallback-filter:
+    geoip: false
+    ipcidr:
+    - 240.0.0.0/4
+  default-nameserver:
+    - 9.9.9.9
+    - 1.1.1.1
+    - 8.8.8.8
+  nameserver:
+    - https://dns.quad9.net/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  fallback:
+    - tcp://9.9.9.9
+    - tcp://1.1.1.1
+    - tcp://8.8.8.8
+  fake-ip-range: 198.18.0.1/16
+  fake-ip-filter:
+  - "+.*"
+  - ntp7.*.com
+  - ntp6.*.com
+  - ntp5.*.com
+  - ntp4.*.com
+  - ntp3.*.com
+  - ntp2.*.com
+  - ntp1.*.com
+  - ntp.*.com
+  - time7.*.com
+  - time6.*.com
+  - time5.*.com
+  - time4.*.com
+  - time3.*.com
+  - time2.*.com
+  - time1.*.com
+  - time.*.apple.com
+  - time.*.edu.cn
+  - time.*.gov
+  - time.*.com
+  - "*.home.arpa"
+  - "*.local"
+  - "*.test"
+  - "*.localhost"
+  - "*.invalid"
+  - "*.example"
+  - "*.localdomain"
+  - "*.lan"
+tun:
+  enable: true
+  stack: system
+  auto-route: true
+
+proxy-groups: 
+- name: All 
+  type: select
+  url: 'https://duckduckgo.com'
+  interval: 12
+  proxies:
+  - PingLBXFinal
+  - PingLBXFinalch
+  - Ping++
+  - Ping++mix
+  - PingLB++rb
+  - PingLB++ch
+  - Fallback
+  - FallbackLBrb
+  - FallbackLBch
+  - PingLBXrb
+  - PingLBXch
+  - FallbackXrb
+  - FallbackXch
+  - Manual
+- name: PingLBXFinal
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 10
+  tolerance: 2000
+  lazy: false
+  proxies:
+  - PingLB++rb
+  - PingLB++rb2
+- name: PingLBXFinalch
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  strategy: consistent-hashing
+  disable-udp: false
+  interval: 10
+  tolerance: 2000
+  lazy: false
+  proxies:
+  - PingLB++ch
+  - PingLB++ch2
+- name: Manual 
+  type: select
+  url: 'https://duckduckgo.com'
+  interval: 12
+  use:
+  - trojan1u
+  - trojan1u2
+  - trojan2u
+  - backupu
+- name: Manual1
+  type: select
+  url: 'https://duckduckgo.com'
+  interval: 12
+  use:
+  - trojan1u
+  - trojan1u2
+  - trojan2u
+  - backupu
+- name: Manual2
+  type: select
+  url: 'https://duckduckgo.com'
+  interval: 12
+  use:
+  - trojan1u
+  - trojan1u2
+  - trojan2u
+  - backupu
+- name: PingLB++rb
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  interval: 24
+  strategy: round-robin
+  disable-udp: false
+  tolerance: 600
+  lazy: false
+  proxies:
+  - Pinglb
+  - Pinglb2
+- name: PingLB++rb2
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  interval: 24
+  strategy: round-robin
+  disable-udp: false
+  tolerance: 600
+  lazy: false
+  proxies:
+  - Pinglbx
+  - Pinglb2x
+- name: PingLB++ch
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  interval: 24
+  strategy: consistent-hashing
+  disable-udp: false
+  tolerance: 600
+  lazy: false
+  proxies:
+  - Pinglb
+  - Pinglbx
+- name: PingLB++ch2
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  interval: 24
+  strategy: consistent-hashing
+  disable-udp: false
+  tolerance: 600
+  lazy: false
+  proxies:
+  - Pinglb2
+  - Pinglb2x
+- name: Pinglb
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 20
+  tolerance: 400
+  lazy: false
+  use:
+  - trojan1u2
+  - trojan1u
+  - backupu
+  - trojan2u
+- name: Pinglb2
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 20
+  tolerance: 400
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+  - backupu
+  - trojan2u
+- name: Pinglbx
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 22
+  tolerance: 420
+  lazy: false
+  use:
+  - trojan1u2
+  - trojan1u
+  - backupu
+  - trojan2u
+- name: Pinglb2x
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 22
+  tolerance: 420
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+  - backupu
+  - trojan2u
+- name: Ping++
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 12
+  tolerance: 1200
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+  - backupu
+  - trojan2u
+- name: Ping++mix
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 12
+  tolerance: 1200
+  lazy: false
+  proxies:
+  - Manual1
+  - Manual2
+  - Pinga
+  - Pingb
+  - Fallback
+- name: Pinga
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 12
+  tolerance: 1200
+  lazy: false
+  use:
+  - trojan1u2
+  - trojan1u
+- name: Pingb
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 12
+  tolerance: 1200
+  lazy: false
+  use:
+  - trojan1u
+  - trojan1u2
+- name: FallbackLBrb
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  interval: 12
+  strategy: round-robin
+  disable-udp: false
+  lazy: false
+  proxies:
+  - Fallback
+  - Fallback2
+- name: FallbackLBch
+  type: load-balance
+  url: 'https://duckduckgo.com'
+  interval: 12
+  strategy: consistent-hashing
+  disable-udp: false
+  lazy: false
+  proxies:
+  - Fallback
+  - Fallback2
+- name: FallbackXch
+  type: fallback
+  url: 'https://duckduckgo.com'
+  interval: 10
+  tolerance: 1000
+  proxies:
+  - FallbackLBch
+  - BackupV
+  - BackupX
+- name: FallbackXrb
+  type: fallback
+  url: 'https://duckduckgo.com'
+  interval: 10
+  tolerance: 1000
+  proxies:
+  - FallbackLBrb
+  - BackupV
+  - BackupX
+- name: PingLBXch
+  type: fallback
+  url: 'https://duckduckgo.com'
+  interval: 10
+  tolerance: 1000
+  proxies:
+  - PingLB++ch
+  - BackupV
+  - BackupX
+- name: PingLBXrb
+  type: fallback
+  url: 'https://duckduckgo.com'
+  interval: 10
+  tolerance: 1000
+  proxies:
+  - PingLB++rb
+  - BackupV
+  - BackupX
+- name: Fallback
+  type: fallback
+  url: 'https://duckduckgo.com'
+  tolerance: 1000
+  interval: 10
+  proxies:
+  - Manual1
+  - Manual2
+  - Pinga
+  - Pingb
+  - BackupV
+- name: Fallback2
+  type: fallback
+  url: 'https://duckduckgo.com'
+  tolerance: 1000
+  interval: 10
+  proxies:
+  - Manual1
+  - Manual2
+  - Pinga
+  - Pingb
+  - BackupV
+- name: BackupV
+  type: fallback
+  url: 'https://duckduckgo.com'
+  tolerance: 1000
+  interval: 10
+  use:
+  - trojan1u
+  - trojan1u2
+- name: BackupX
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 15
+  tolerance: 500
+  lazy: false
+  use:
+  - backupu
+  - trojan2u
+
+proxy-providers:
+  trojan1u:
+    type: http
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/apddigitrojan.yaml"
+    interval: 60
+    path: ./trojan1u.yaml
+    health-check:
+      enable: true
+      interval: 28
+      lazy: false
+      url: https://duckduckgo.com
+
+
+
+rules:
+  - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
+  - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
+  - IP-CIDR,172.16.0.0/12,REJECT,no-resolve
+  - IP-CIDR,127.0.0.0/8,REJECT,no-resolve
+  - IP-CIDR,100.64.0.0/10,REJECT,no-resolve
+  - IP-CIDR6,::1/128,REJECT,no-resolve
+  - IP-CIDR6,fc00::/7,REJECT,no-resolve
+  - IP-CIDR6,fe80::/10,REJECT,no-resolve
+  - IP-CIDR6,fd00::/8,REJECT,no-resolve
+  - DOMAIN-SUFFIX,ad.com,REJECT
+  - DOMAIN,analytics.google.com,REJECT
+  - DOMAIN,analyticsinsights-pa.googleapis.com,REJECT
+  - DOMAIN,analyticsreporting.googleapis.com,REJECT
+  - DOMAIN-SUFFIX,doubleclick.net,REJECT
+  - DOMAIN-SUFFIX,googleadservices.com,REJECT
+  - DOMAIN-SUFFIX,googleadsserving.cn,REJECT
+  - DOMAIN-SUFFIX,googlesyndication.com,REJECT
+  - DOMAIN-SUFFIX,googletagmanager.com,REJECT
+  - DOMAIN-SUFFIX,googletagservices.com,REJECT
+  - DOMAIN-SUFFIX,google-analytics.com,REJECT
+  - DOMAIN-KEYWORD,adservice,REJECT
+  - DOMAIN-KEYWORD,analytics,REJECT
+  - DOMAIN-KEYWORD,analysis,REJECT
+  - SRC-IP-CIDR,192.168.1.201/32,REJECT
+  - IP-CIDR,198.18.0.1/16,REJECT,REJECT
+  - GEOIP,IR,REJECT
+  - MATCH,All

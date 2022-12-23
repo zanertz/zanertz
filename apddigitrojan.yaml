@@ -1,0 +1,160 @@
+proxies:
+
+- name: "RaceB"
+  type: trojan
+  server: sg2-full.privateip.net
+  port: 443
+  password: 03b7b8d0-e337-4915-bbf0-5283cf041308
+  udp: true
+  sni: scarletviolet.pokemon.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "RaceA"
+  type: trojan
+  server: sg-full.privateip.net
+  port: 443
+  password: cc3cb8d8-6fdd-4445-af3a-1dfe28b67d08
+  udp: true
+  sni: scarletviolet.pokemon.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "openDotunnel"
+  server: sgv-3.openv2ray.com
+  port: 443
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  sni: scarletviolet.pokemon.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /u/opentunnel.net-sukbuy82
+   headers:
+    Host: scarletviolet.pokemon.com
+
+- name: "HideDo"
+  server: dns.google.2v66ge.hidessh.my.id
+  port: 443
+  type: trojan
+  password: 5d27cf48-fad3-42e1-8ba8-2aae6a10b450
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /hidessh-trojan-ws
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
+- name: "Do1"
+  type: trojan
+  server: dns.google.do1.kitu.xyz
+  port: 443
+  password: whyvpn-condalta
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "Do2"
+  type: trojan
+  server: dns.google.do2.kitu.xyz
+  port: 443
+  password: whyvpn-wurdtdsd
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "Do3"
+  type: trojan
+  server: dns.google.do3.kitu.xyz
+  port: 443
+  password: whyvpn-octanrxk
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "VSM2"
+  server: v-2.unifi.my.id
+  port: 443
+  type: vmess
+  uuid: 7bf72d02-95bf-4f88-a345-d87d802b74ac
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree/
+   headers:
+    Host: mobilelegends.com
+
+- name: "backserver3do20dec"
+  server: ulist.com.my.dynamic-sg3b.obfs.xyf
+  port: 443
+  type: vmess
+  uuid: 7ec06900-0c4e-4c3f-8d25-88320cdffdc9
+  sni: scarletviolet.pokemon.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree
+   headers:
+    Host: scarletviolet.pokemon.com
+
+- name: "backserversk1-22jan"
+  server: sg1-v2ray.sshkit.org
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  sni: scarletviolet.pokemon.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /sshkit/1074999023/63a51672383c8/
+   headers:
+    Host: scarletviolet.pokemon.com
+
+- name: "backserversk4-22jan"
+  server: ulist.com.my.sk4jan22-dns.whyssh.my.id
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  sni: scarletviolet.pokemon.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /sshkit/1074999023/63a516b76ca99/
+   headers:
+    Host: scarletviolet.pokemon.com
