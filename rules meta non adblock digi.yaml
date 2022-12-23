@@ -112,27 +112,18 @@ proxy-groups:
   interval: 12
   use:
   - trojan1u
-  - trojan1u2
-  - trojan2u
-  - backupu
 - name: Manual1
   type: select
   url: 'https://duckduckgo.com'
   interval: 12
   use:
   - trojan1u
-  - trojan1u2
-  - trojan2u
-  - backupu
 - name: Manual2
   type: select
   url: 'https://duckduckgo.com'
   interval: 12
   use:
   - trojan1u
-  - trojan1u2
-  - trojan2u
-  - backupu
 - name: PingLB++rb
   type: load-balance
   url: 'https://duckduckgo.com'
@@ -184,10 +175,7 @@ proxy-groups:
   tolerance: 400
   lazy: false
   use:
-  - trojan1u2
   - trojan1u
-  - backupu
-  - trojan2u
 - name: Pinglb2
   type: url-test
   url: 'https://duckduckgo.com'
@@ -196,9 +184,6 @@ proxy-groups:
   lazy: false
   use:
   - trojan1u
-  - trojan1u2
-  - backupu
-  - trojan2u
 - name: Pinglbx
   type: url-test
   url: 'https://duckduckgo.com'
@@ -206,10 +191,7 @@ proxy-groups:
   tolerance: 420
   lazy: false
   use:
-  - trojan1u2
   - trojan1u
-  - backupu
-  - trojan2u
 - name: Pinglb2x
   type: url-test
   url: 'https://duckduckgo.com'
@@ -218,9 +200,6 @@ proxy-groups:
   lazy: false
   use:
   - trojan1u
-  - trojan1u2
-  - backupu
-  - trojan2u
 - name: Ping++
   type: url-test
   url: 'https://duckduckgo.com'
@@ -229,9 +208,6 @@ proxy-groups:
   lazy: false
   use:
   - trojan1u
-  - trojan1u2
-  - backupu
-  - trojan2u
 - name: Ping++mix
   type: url-test
   url: 'https://duckduckgo.com'
@@ -251,7 +227,6 @@ proxy-groups:
   tolerance: 1200
   lazy: false
   use:
-  - trojan1u2
   - trojan1u
 - name: Pingb
   type: url-test
@@ -261,7 +236,6 @@ proxy-groups:
   lazy: false
   use:
   - trojan1u
-  - trojan1u2
 - name: FallbackLBrb
   type: load-balance
   url: 'https://duckduckgo.com'
@@ -347,7 +321,6 @@ proxy-groups:
   interval: 10
   use:
   - trojan1u
-  - trojan1u2
 - name: BackupX
   type: url-test
   url: 'https://duckduckgo.com'
@@ -355,8 +328,7 @@ proxy-groups:
   tolerance: 500
   lazy: false
   use:
-  - backupu
-  - trojan2u
+  - trojan1u
 
 proxy-providers:
   trojan1u:
