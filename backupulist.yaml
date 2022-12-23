@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-darwn98
+   path: /u/opentunnel.net-sukbuy82
    headers:
     Host: mm.net.my
 
@@ -68,8 +68,8 @@ proxies:
    headers:
     Host: mm.net.my
 
-- name: "backserversk1-22dec"
-  server: ulist.com.my.sk1-dns.whyssh.my.id
+- name: "backserversk1-22jan"
+  server: ulist.com.my.sk1jan22-dns.whyssh.my.id
   port: 443
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -81,12 +81,12 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/637be2234ba44/
+   path: /sshkit/1074999023/63a51672383c8/
    headers:
     Host: mm.net.my
 
-- name: "backserversk4-22dec"
-  server: ulist.com.my.sk4-dns.whyssh.my.id
+- name: "backserversk4-22jan"
+  server: ulist.com.my.sk4jan22-dns.whyssh.my.id
   port: 443
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -98,6 +98,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/637be26398044/
+   path: /sshkit/1074999023/63a516b76ca99/
    headers:
     Host: mm.net.my
