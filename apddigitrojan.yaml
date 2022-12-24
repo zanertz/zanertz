@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: sg2-full.privateip.net
   port: 443
-  password: 03b7b8d0-e337-4915-bbf0-5283cf041308
+  password: d3d0d32e-2c38-4cc2-b249-7667a2d3595c
   udp: true
   sni: scarletviolet.pokemon.com
   alpn:
@@ -16,7 +16,7 @@ proxies:
   type: trojan
   server: sg-full.privateip.net
   port: 443
-  password: cc3cb8d8-6fdd-4445-af3a-1dfe28b67d08
+  password: e4edbfbd-4e14-4dfb-920c-97dc4fc3b9f3
   udp: true
   sni: scarletviolet.pokemon.com
   alpn:
