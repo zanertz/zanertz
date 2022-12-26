@@ -1,0 +1,35 @@
+proxies:
+
+- name: "indo3jan"
+  server: id-lb.vhax.net
+  port: 443
+  type: vmess
+  uuid: 6fea1649-425b-4092-bf53-29792152c925
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /sshkit/kamedla/63a8e8ac7e684/
+   headers:
+    Host: mobilelegends.com
+
+- name: "backserverjantit"
+  server: my2.vpnjantit.com
+  port: 10001
+  type: vmess
+  uuid: 529dd742-77cb-11ed-a154-00163e005b89
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /vpnjantit
+   headers:
+    Host: mobilelegends.com
