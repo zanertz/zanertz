@@ -71,6 +71,7 @@ proxy-groups:
   type: select
   url: 'https://www.gstatic.com/generate_204'
   interval: 12
+  disable-udp: true
   proxies:
   - Fallback
   - FallbackLBrb
@@ -87,7 +88,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 12
   strategy: round-robin
-  disable-udp: false
+  disable-udp: true
   lazy: true
   proxies:
   - Fallback
@@ -97,7 +98,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   interval: 12
   strategy: consistent-hashing
-  disable-udp: false
+  disable-udp: true
   lazy: true
   proxies:
   - Fallback
@@ -107,6 +108,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   tolerance: 1000
   interval: 10
+  disable-udp: true
   lazy: true
   proxies:
   - BackupV
@@ -115,6 +117,7 @@ proxy-groups:
   url: 'https://www.gstatic.com/generate_204'
   tolerance: 1000
   interval: 10
+  disable-udp: true
   lazy: true
   proxies:
   - BackupV

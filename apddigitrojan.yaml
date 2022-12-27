@@ -5,7 +5,7 @@ proxies:
   server: sg2-full.privateip.net
   port: 443
   password: d3d0d32e-2c38-4cc2-b249-7667a2d3595c
-  udp: true
+  udp: false
   sni: scarletviolet.pokemon.com
   alpn:
      - h2
@@ -17,7 +17,7 @@ proxies:
   server: sg-full.privateip.net
   port: 443
   password: e4edbfbd-4e14-4dfb-920c-97dc4fc3b9f3
-  udp: true
+  udp: false
   sni: scarletviolet.pokemon.com
   alpn:
      - h2
@@ -34,7 +34,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  udp: true
+  udp: false
   network: ws
   ws-opts:
    path: /u/opentunnel.net-sukbuy82
@@ -53,14 +53,14 @@ proxies:
    path: /hidessh-trojan-ws
    headers:
     Host: mobilelegends.com
-  udp: true
+  udp: false
 
 - name: "Do1"
   type: trojan
   server: dns.google.do1.kitu.xyz
   port: 443
   password: whyvpn-condalta
-  udp: true
+  udp: false
   sni: mobilelegends.com
   alpn:
      - h2
@@ -72,7 +72,7 @@ proxies:
   server: dns.google.do2.kitu.xyz
   port: 443
   password: whyvpn-wurdtdsd
-  udp: true
+  udp: false
   sni: mobilelegends.com
   alpn:
      - h2
@@ -84,7 +84,7 @@ proxies:
   server: dns.google.do3.kitu.xyz
   port: 443
   password: whyvpn-octanrxk
-  udp: true
+  udp: false
   sni: mobilelegends.com
   alpn:
      - h2
@@ -101,7 +101,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  udp: true
+  udp: false
   network: ws
   ws-opts:
    path: /worryfree/
@@ -118,7 +118,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  udp: true
+  udp: false
   network: ws
   ws-opts:
    path: /worryfree
@@ -135,7 +135,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  udp: true
+  udp: false
   network: ws
   ws-opts:
    path: /sshkit/1074999023/63a51672383c8/
@@ -152,7 +152,7 @@ proxies:
   cipher: auto
   tls: true
   skip-cert-verify: true
-  udp: true
+  udp: false
   network: ws
   ws-opts:
    path: /sshkit/1074999023/63a516b76ca99/
