@@ -69,264 +69,60 @@ tun:
 proxy-groups: 
 - name: All 
   type: select
-  url: 'https://duckduckgo.com'
+  url: 'https://www.gstatic.com/generate_204'
   interval: 12
   proxies:
-  - PingLBXFinal
-  - PingLBXFinalch
-  - Ping++
-  - Ping++mix
-  - PingLB++rb
-  - PingLB++ch
   - Fallback
   - FallbackLBrb
   - FallbackLBch
-  - PingLBXrb
-  - PingLBXch
-  - FallbackXrb
-  - FallbackXch
   - Manual
-- name: PingLBXFinal
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 10
-  tolerance: 2000
-  lazy: false
-  proxies:
-  - PingLB++rb
-  - PingLB++rb2
-- name: PingLBXFinalch
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  strategy: consistent-hashing
-  disable-udp: false
-  interval: 10
-  tolerance: 2000
-  lazy: false
-  proxies:
-  - PingLB++ch
-  - PingLB++ch2
 - name: Manual 
   type: select
-  url: 'https://duckduckgo.com'
-  interval: 12
-  use:
-  - trojan1u
-- name: Manual1
-  type: select
-  url: 'https://duckduckgo.com'
-  interval: 12
-  use:
-  - trojan1u
-- name: Manual2
-  type: select
-  url: 'https://duckduckgo.com'
-  interval: 12
-  use:
-  - trojan1u
-- name: PingLB++rb
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 24
-  strategy: round-robin
-  disable-udp: false
-  tolerance: 600
-  lazy: false
-  proxies:
-  - Pinglb
-  - Pinglb2
-- name: PingLB++rb2
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 24
-  strategy: round-robin
-  disable-udp: false
-  tolerance: 600
-  lazy: false
-  proxies:
-  - Pinglbx
-  - Pinglb2x
-- name: PingLB++ch
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 24
-  strategy: consistent-hashing
-  disable-udp: false
-  tolerance: 600
-  lazy: false
-  proxies:
-  - Pinglb
-  - Pinglbx
-- name: PingLB++ch2
-  type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 24
-  strategy: consistent-hashing
-  disable-udp: false
-  tolerance: 600
-  lazy: false
-  proxies:
-  - Pinglb2
-  - Pinglb2x
-- name: Pinglb
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 20
-  tolerance: 400
-  lazy: false
-  use:
-  - trojan1u
-- name: Pinglb2
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 20
-  tolerance: 400
-  lazy: false
-  use:
-  - trojan1u
-- name: Pinglbx
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 22
-  tolerance: 420
-  lazy: false
-  use:
-  - trojan1u
-- name: Pinglb2x
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 22
-  tolerance: 420
-  lazy: false
-  use:
-  - trojan1u
-- name: Ping++
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 12
-  tolerance: 1200
-  lazy: false
-  use:
-  - trojan1u
-- name: Ping++mix
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 12
-  tolerance: 1200
-  lazy: false
-  proxies:
-  - Manual1
-  - Manual2
-  - Pinga
-  - Pingb
-  - Fallback
-- name: Pinga
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 12
-  tolerance: 1200
-  lazy: false
-  use:
-  - trojan1u
-- name: Pingb
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 12
-  tolerance: 1200
-  lazy: false
+  url: 'https://www.gstatic.com/generate_204'
+  interval: 10
   use:
   - trojan1u
 - name: FallbackLBrb
   type: load-balance
-  url: 'https://duckduckgo.com'
+  url: 'https://www.gstatic.com/generate_204'
   interval: 12
   strategy: round-robin
   disable-udp: false
-  lazy: false
+  lazy: true
   proxies:
   - Fallback
   - Fallback2
 - name: FallbackLBch
   type: load-balance
-  url: 'https://duckduckgo.com'
-  interval: 12
+  url: 'https://www.gstatic.com/generate_204'
+  interval: 10
   strategy: consistent-hashing
   disable-udp: false
-  lazy: false
+  lazy: true
   proxies:
   - Fallback
   - Fallback2
-- name: FallbackXch
-  type: fallback
-  url: 'https://duckduckgo.com'
-  interval: 10
-  tolerance: 1000
-  proxies:
-  - FallbackLBch
-  - BackupV
-  - BackupX
-- name: FallbackXrb
-  type: fallback
-  url: 'https://duckduckgo.com'
-  interval: 10
-  tolerance: 1000
-  proxies:
-  - FallbackLBrb
-  - BackupV
-  - BackupX
-- name: PingLBXch
-  type: fallback
-  url: 'https://duckduckgo.com'
-  interval: 10
-  tolerance: 1000
-  proxies:
-  - PingLB++ch
-  - BackupV
-  - BackupX
-- name: PingLBXrb
-  type: fallback
-  url: 'https://duckduckgo.com'
-  interval: 10
-  tolerance: 1000
-  proxies:
-  - PingLB++rb
-  - BackupV
-  - BackupX
 - name: Fallback
   type: fallback
-  url: 'https://duckduckgo.com'
+  url: 'https://www.gstatic.com/generate_204'
   tolerance: 1000
   interval: 10
+  lazy: true
   proxies:
-  - Manual1
-  - Manual2
-  - Pinga
-  - Pingb
   - BackupV
 - name: Fallback2
   type: fallback
-  url: 'https://duckduckgo.com'
+  url: 'https://www.gstatic.com/generate_204'
   tolerance: 1000
   interval: 10
+  lazy: true
   proxies:
-  - Manual1
-  - Manual2
-  - Pinga
-  - Pingb
   - BackupV
 - name: BackupV
   type: fallback
-  url: 'https://duckduckgo.com'
+  url: 'https://www.gstatic.com/generate_204'
   tolerance: 1000
   interval: 10
-  use:
-  - trojan1u
-- name: BackupX
-  type: url-test
-  url: 'https://duckduckgo.com'
-  interval: 15
-  tolerance: 500
-  lazy: false
   use:
   - trojan1u
 
@@ -340,7 +136,7 @@ proxy-providers:
       enable: true
       interval: 28
       lazy: false
-      url: https://duckduckgo.com
+      url: https://www.gstatic.com/generate_204
 
 
 
