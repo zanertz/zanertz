@@ -29,7 +29,7 @@ dns:
 proxy-groups: 
 - name: All 
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://www.gstatic.com/generate_204'
   interval: 15
   proxies:
   - Ping++
@@ -37,20 +37,20 @@ proxy-groups:
   - Manual
 - name: Manual 
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://www.gstatic.com/generate_204'
   interval: 15
   use:
   - malaycffall
 - name: Ping++
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://www.gstatic.com/generate_204'
   interval: 15
   tolerance: 1200
   use:
   - malaycffall
 - name: Fallback
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://www.gstatic.com/generate_204'
   interval: 10
   lazy: false
   use:
@@ -66,9 +66,10 @@ proxy-providers:
       enable: true
       interval: 50
       lazy: false
-      url: https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt
+      url: https://www.gstatic.com/generate_204
 
 rules:
+  - DOMAIN-SUFFIX,raw.githubusercontent.com,DIRECT
   - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
   - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
   - IP-CIDR,172.16.0.0/12,REJECT,no-resolve
