@@ -66,7 +66,7 @@ tun:
 proxy-groups: 
 - name: All 
   type: select
-  url: 'https://www.gstatic.com/generate_204'
+  url: 'https://bit.ly/3YV7pDy'
   interval: 12
   disable-udp: false
   proxies:
@@ -76,13 +76,13 @@ proxy-groups:
   - Manual
 - name: Manual 
   type: select
-  url: 'https://www.gstatic.com/generate_204'
+  url: 'https://bit.ly/3YV7pDy'
   interval: 10
   use:
   - trojan1u
 - name: FallbackLBrb
   type: load-balance
-  url: 'https://www.gstatic.com/generate_204'
+  url: 'https://bit.ly/3YV7pDy'
   interval: 12
   strategy: round-robin
   disable-udp: false
@@ -92,7 +92,7 @@ proxy-groups:
   - Fallback2
 - name: FallbackLBch
   type: load-balance
-  url: 'https://www.gstatic.com/generate_204'
+  url: 'https://bit.ly/3YV7pDy'
   interval: 12
   strategy: consistent-hashing
   disable-udp: false
@@ -102,7 +102,7 @@ proxy-groups:
   - Fallback2
 - name: Fallback
   type: fallback
-  url: 'https://www.gstatic.com/generate_204'
+  url: 'https://bit.ly/3YV7pDy'
   tolerance: 1000
   interval: 10
   disable-udp: false
@@ -111,7 +111,7 @@ proxy-groups:
   - BackupV
 - name: Fallback2
   type: fallback
-  url: 'https://www.gstatic.com/generate_204'
+  url: 'https://bit.ly/3YV7pDy'
   tolerance: 1000
   interval: 10
   disable-udp: false
@@ -120,7 +120,7 @@ proxy-groups:
   - BackupV
 - name: BackupV
   type: fallback
-  url: 'https://www.gstatic.com/generate_204'
+  url: 'https://bit.ly/3YV7pDy'
   tolerance: 1000
   interval: 10
   use:
@@ -136,7 +136,7 @@ proxy-providers:
       enable: true
       interval: 28
       lazy: false
-      url: https://www.gstatic.com/generate_204
+      url: https://bit.ly/3YV7pDy
 
 rules:
   - DOMAIN-SUFFIX,raw.githubusercontent.com,DIRECT
