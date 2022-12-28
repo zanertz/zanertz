@@ -16,7 +16,7 @@ dns:
   enhanced-mode: fake-ip
   listen: 0.0.0.0:7895
   fallback-filter:
-    geoip: true
+    geoip: false
     ipcidr:
     - 240.0.0.0/4
   default-nameserver:
