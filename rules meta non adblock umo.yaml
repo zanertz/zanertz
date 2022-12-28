@@ -16,21 +16,18 @@ dns:
   enhanced-mode: fake-ip
   listen: 0.0.0.0:7895
   fallback-filter:
-    geoip: false
+    geoip: true
     ipcidr:
     - 240.0.0.0/4
   default-nameserver:
     - 9.9.9.9
-    - 1.1.1.1
-    - 8.8.8.8
+    - 149.112.112.112
   nameserver:
     - https://dns.quad9.net/dns-query
-    - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
+    - tls://dns.quad9.net:853
   fallback:
     - tcp://9.9.9.9
-    - tcp://1.1.1.1
-    - tcp://8.8.8.8
+    - tcp://149.112.112.112
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
   - "+.*"
@@ -181,7 +178,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 400
+  tolerance: 500
   lazy: false
   use:
   - trojan1u2
@@ -192,7 +189,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 20
-  tolerance: 400
+  tolerance: 500
   lazy: false
   use:
   - trojan1u
@@ -203,7 +200,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 22
-  tolerance: 420
+  tolerance: 520
   lazy: false
   use:
   - trojan1u2
@@ -214,7 +211,7 @@ proxy-groups:
   type: url-test
   url: 'https://duckduckgo.com'
   interval: 22
-  tolerance: 420
+  tolerance: 520
   lazy: false
   use:
   - trojan1u
