@@ -1,7 +1,7 @@
 proxies:
 
 - name: "indo3jan"
-  server: id-lb.vhax.net
+  server: id-lb.vhax.nety
   port: 443
   type: vmess
   uuid: 6fea1649-425b-4092-bf53-29792152c925
@@ -17,11 +17,11 @@ proxies:
    headers:
     Host: mobilelegends.com
 
-- name: "backserverjantit"
-  server: my2.vpnjantit.com
-  port: 10001
+- name: "backservemy"
+  server: my.v2-ray.com
+  port: 443
   type: vmess
-  uuid: 529dd742-77cb-11ed-a154-00163e005b89
+  uuid: 2e720660-8695-11ed-b939-205c6d5f5d78
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
@@ -30,6 +30,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /vpnjantit
+   path: /fastssh
    headers:
     Host: mobilelegends.com
