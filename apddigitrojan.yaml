@@ -108,7 +108,7 @@ proxies:
    headers:
     Host: scarletviolet.pokemon.com
 
-name: "DynamicDo9jan"
+- name: "DynamicDo9jan"
   server: dynamic-sg1b.obfs.xyz
   port: 443
   type: vmess
