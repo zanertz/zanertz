@@ -317,10 +317,10 @@ proxy-groups:
   tolerance: 420
   interval: 22
   proxies:
-  - Manual1
   - Manual2
-  - Pinga
+  - Manual1
   - Pingb
+  - Pinga
 
 proxy-providers:
   trojan1u:
