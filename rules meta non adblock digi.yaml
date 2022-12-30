@@ -159,6 +159,7 @@ proxy-providers:
 
 rules:
   - DOMAIN-SUFFIX,raw.githubusercontent.com,sshkit1_22jan
+  - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
   - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
   - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
   - IP-CIDR,172.16.0.0/12,REJECT,no-resolve

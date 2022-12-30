@@ -401,6 +401,7 @@ proxy-providers:
       url: https://duckduckgo.com
 
 rules:
+  - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
   - DOMAIN-SUFFIX,raw.githubusercontent.com,DIRECT
   - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
   - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
