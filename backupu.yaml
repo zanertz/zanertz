@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-sukbuy82
+   path: /u/opentunnel.net-gajiwa9
    headers:
     Host: mobilelegends.com
 

@@ -37,7 +37,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-sukbuy82
+   path: /u/opentunnel.net-gajiwa9
    headers:
     Host: scarletviolet.pokemon.com
 
@@ -47,12 +47,12 @@ proxies:
   type: trojan
   password: 5d27cf48-fad3-42e1-8ba8-2aae6a10b450
   skip-cert-verify: true
-  sni: mobilelegends.com
+  sni: scarletviolet.pokemon.com
   network: ws
   ws-opts:
    path: /hidessh-trojan-ws
    headers:
-    Host: mobilelegends.com
+    Host: scarletviolet.pokemon.com
   udp: true
 
 - name: "Do1"
@@ -61,7 +61,7 @@ proxies:
   port: 443
   password: whyvpn-condalta
   udp: true
-  sni: mobilelegends.com
+  sni: scarletviolet.pokemon.com
   alpn:
      - h2
      - http/1.1
@@ -73,7 +73,7 @@ proxies:
   port: 443
   password: whyvpn-wurdtdsd
   udp: true
-  sni: mobilelegends.com
+  sni: scarletviolet.pokemon.com
   alpn:
      - h2
      - http/1.1
@@ -85,7 +85,7 @@ proxies:
   port: 443
   password: whyvpn-octanrxk
   udp: true
-  sni: mobilelegends.com
+  sni: scarletviolet.pokemon.com
   alpn:
      - h2
      - http/1.1
@@ -96,7 +96,7 @@ proxies:
   port: 443
   type: vmess
   uuid: 7bf72d02-95bf-4f88-a345-d87d802b74ac
-  sni: mobilelegends.com
+  sni: scarletviolet.pokemon.com
   alterId: 0
   cipher: auto
   tls: true
@@ -106,13 +106,13 @@ proxies:
   ws-opts:
    path: /worryfree/
    headers:
-    Host: mobilelegends.com
+    Host: scarletviolet.pokemon.com
 
-- name: "backserver3do20dec"
-  server: ulist.com.my.dynamic-sg3b.obfs.xyf
+name: "DynamicDo9jan"
+  server: dynamic-sg1b.obfs.xyz
   port: 443
   type: vmess
-  uuid: 7ec06900-0c4e-4c3f-8d25-88320cdffdc9
+  uuid: abcfbd07-d8d5-4be6-a4c5-e466b6cb9375
   sni: scarletviolet.pokemon.com
   alterId: 0
   cipher: auto

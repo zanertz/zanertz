@@ -2,7 +2,7 @@ proxies:
 
 - name: "DynaDo29dec.20jandns"
   type: trojan
-  server: ulist.com.my.20jan-dns.whyssh.my.id
+  server: ulist.com.my.20jan-dns.whyssh.my.idy
   port: 443
   password: 0201d280-80ff-11ed-8a4a-1239d0255272
   udp: true
@@ -14,7 +14,7 @@ proxies:
 
 - name: "DynaVultr22dec.11jandns"
   type: trojan
-  server: ulist.com.my.13jan-dns.whyssh.my.id
+  server: ulist.com.my.13jan-dns.whyssh.my.idy
   port: 443
   password: d7723890-7a36-11ed-a888-1239d0255272
   udp: true
@@ -24,11 +24,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "backserver3do20dec"
-  server: ulist.com.my.dynamic-sg3b.obfs.xyz
+name: "DynamicDo9jan"
+  server: dynamic-sg1b.obfs.xyz
   port: 443
   type: vmess
-  uuid: 7ec06900-0c4e-4c3f-8d25-88320cdffdc9
+  uuid: abcfbd07-d8d5-4be6-a4c5-e466b6cb9375
   sni: mobilelegends.com
   alterId: 0
   cipher: auto
@@ -42,7 +42,7 @@ proxies:
     Host: mobilelegends.com
 
 - name: "HowdyVultr22dec"
-  server: dns.google.dynamic-sg2b.obfs.xyz
+  server: dynamic-sg2b.obfs.xyzy
   port: 443
   type: vmess
   uuid: 67c971d5-3cbe-44f6-a24c-4165c7900f1b
