@@ -154,7 +154,7 @@ proxy-providers:
     health-check:
       enable: true
       interval: 28
-      lazy: false
+      lazy: true
       url: https://bit.ly/3YV7pDy
 
 rules:
