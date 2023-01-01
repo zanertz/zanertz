@@ -1,10 +1,10 @@
 proxies:
 
-- name: "DynaDo29dec.20jandns"
+- name: "HowdyUdp1Do10jan.31jandns"
   type: trojan
-  server: ulist.com.my.20jan-dns.whyssh.my.idy
+  server: trojan1.udpgw.com
   port: 443
-  password: 0201d280-80ff-11ed-8a4a-1239d0255272
+  password: 556a73a0-884f-11ed-982a-1239d0255272
   udp: true
   sni: mobilelegends.com
   alpn:

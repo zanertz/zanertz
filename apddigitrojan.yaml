@@ -24,6 +24,18 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
+- name: "HowdyUdp1Do10jan.31jandns"
+  type: trojan
+  server: trojan1.udpgw.com
+  port: 443
+  password: 556a73a0-884f-11ed-982a-1239d0255272
+  udp: true
+  sni: scarletviolet.pokemon.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
 - name: "openDotunnel"
   server: sgv-3.openv2ray.com
   port: 443
