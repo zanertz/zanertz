@@ -13,7 +13,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/kamedla/63a8e8ac7e684/
+   path: /sshkit/airtexz/63b3c1d65ee1e/
    headers:
     Host: mobilelegends.com
 
