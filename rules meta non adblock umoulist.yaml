@@ -21,13 +21,13 @@ dns:
     - 240.0.0.0/4
   default-nameserver:
     - 9.9.9.9
-    - 149.112.112.112
+    - 1.1.1.1
   nameserver:
-    - https://dns.quad9.net/dns-query
-    - tls://dns.quad9.net:853
+    - 9.9.9.9
+    - 1.1.1.1
   fallback:
     - tcp://9.9.9.9
-    - tcp://149.112.112.112
+    - tcp://1.1.1.1
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
   - "+.*"
