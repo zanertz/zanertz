@@ -72,6 +72,7 @@ proxy-groups:
   - PingLBXFinal
   - FallbackLBXFinal
   - PingLBXFinalch
+  - PingDiabloMux
   - Ping++
   - Ping++mix
   - PingLB++rb
@@ -100,6 +101,15 @@ proxy-groups:
   proxies:
   - PingLB++ch
   - PingLB++ch2
+- name: PingDiabloMux
+  type: url-test
+  url: 'https://duckduckgo.com'
+  interval: 10
+  tolerance: 2000
+  lazy: false
+  proxies:
+  - Pinglb
+  - Pinglb2
 - name: Manual 
   type: select
   url: 'https://duckduckgo.com'
