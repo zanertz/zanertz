@@ -380,7 +380,6 @@ proxy-providers:
 
 rules:
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
-  - DOMAIN-SUFFIX,raw.githubusercontent.com,DIRECT
   - IP-CIDR,192.168.0.0/16,REJECT,no-resolve
   - IP-CIDR,10.0.0.0/8,REJECT,no-resolve
   - IP-CIDR,172.16.0.0/12,REJECT,no-resolve
