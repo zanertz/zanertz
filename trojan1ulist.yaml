@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: ulist.com.my.sg2-full.privateip.net
   port: 443
-  password: 328ff710-518b-4037-9b44-07ece10cfccb
+  password: f726ca36-00d1-4418-9c9a-b9b901d68845
   udp: true
   sni: mm.net.my
   alpn:
