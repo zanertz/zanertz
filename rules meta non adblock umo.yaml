@@ -20,13 +20,10 @@ dns:
     ipcidr:
     - 240.0.0.0/4
   default-nameserver:
-    - 9.9.9.9
     - 1.1.1.1
   nameserver:
-    - 9.9.9.9
-    - 1.1.1.1
+    - tls://1dot1dot1dot1.cloudflare-dns.com:853
   fallback:
-    - tcp://9.9.9.9
     - tcp://1.1.1.1
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
