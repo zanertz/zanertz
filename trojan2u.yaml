@@ -1,8 +1,8 @@
 proxies:
 
-- name: "HowdyUdp2Do20jan.8febdns"
+- name: "HowdyUdp3Do24jan.17febdns"
   type: trojan
-  server: trojan2.udpgw.com
+  server: trojan3.udpgw.com
   port: 443
   password: 72bb5330-90c0-11ed-bffa-1239d0255272
   udp: true
@@ -36,11 +36,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "DynamicDo9jan"
-  server: dynamic-sg1b.obfs.xyz
+- name: "DynamicDo23jan"
+  server: dynamic-sg3b.obfs.xyz
   port: 443
   type: vmess
-  uuid: abcfbd07-d8d5-4be6-a4c5-e466b6cb9375
+  uuid: 44f2b093-e90d-402a-8683-05a191ee5f94
   sni: mobilelegends.com
   alterId: 0
   cipher: auto

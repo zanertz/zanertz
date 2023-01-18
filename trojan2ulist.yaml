@@ -1,8 +1,8 @@
 proxies:
 
-- name: "HowdyUdp2Do20jan.8febdns"
+- name: "HowdyUdp3Do24jan.17febdns"
   type: trojan
-  server: ulist.com.my.8feb-dns.whyssh.my.id
+  server: ulist.com.my.16feb-dns.whyssh.my.id
   port: 443
   password: 72bb5330-90c0-11ed-bffa-1239d0255272
   udp: true
@@ -36,12 +36,12 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "DynamicDo9jan"
-  server: ulist.com.my.dynamic-sg1b.obfs.xyz
+- name: "DynamicDo23jan"
+  server: ulist.com.my.dynamic-sg3b.obfs.xyz
   port: 443
   type: vmess
-  uuid: abcfbd07-d8d5-4be6-a4c5-e466b6cb9375
-  sni: mobilelegends.com
+  uuid: 44f2b093-e90d-402a-8683-05a191ee5f94
+  sni: mm.net.my
   alterId: 0
   cipher: auto
   tls: true
@@ -51,7 +51,7 @@ proxies:
   ws-opts:
    path: /worryfree
    headers:
-    Host: mobilelegends.com
+    Host: mm.net.my
 
 - name: "Fastdyna19jan"
   server: ulist.com.my.dynamic-sg2b.obfs.xyz
