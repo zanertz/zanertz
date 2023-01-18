@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: ulist.com.my.16feb-dns.whyssh.my.id
   port: 443
-  password: 72bb5330-90c0-11ed-bffa-1239d0255272
+  password: 64bdfa80-96c6-11ed-ab90-1239d0255272
   udp: true
   sni: mm.net.my
   alpn:
