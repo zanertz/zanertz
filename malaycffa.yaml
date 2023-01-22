@@ -17,6 +17,23 @@ proxies:
    headers:
     Host: mobilelegends.com
 
+- name: "oceanbackserver"
+  server: my1.v2rayserv.com
+  port: 443
+  type: vmess
+  uuid: 2d2bc7c6-4749-4c98-a1ce-2964e979594f
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /vmess
+   headers:
+    Host: mobilelegends.com
+
 - name: "backserverjantit"
   server: my2.vpnjantit.com
   port: 10001
