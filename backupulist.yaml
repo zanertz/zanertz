@@ -13,7 +13,24 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-murytiop75
+   path: /u/opentunnel.net-ozincha2
+   headers:
+    Host: mm.net.my
+
+- name: "backservermelbidsg3"
+  server: ulist.com.my.23feb-dns.whyssh.my.id
+  port: 443
+  type: vmess
+  uuid: 9cae5c10-9b44-11ed-b432-205c6d5f5d78
+  sni: mm.net.my
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /ex38mcgb
    headers:
     Host: mm.net.my
 
@@ -85,8 +102,8 @@ proxies:
    headers:
     Host: mm.net.my
 
-- name: "backserversk4-22jan"
-  server: ulist.com.my.sk4jan22-dns.whyssh.my.id
+- name: "backserversk4-23feb"
+  server: ulist.com.my.22feb-dns.whyssh.my.id
   port: 443
   type: vmess
   uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
@@ -98,6 +115,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/63a516b76ca99/
+   path: /sshkit/1074999023/63cec9036bc6b/
    headers:
     Host: mm.net.my

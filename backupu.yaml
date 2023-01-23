@@ -1,7 +1,7 @@
 proxies:
 
 - name: "backserver"
-  server: dns.google.sgv-3.openv2ray.com
+  server: sgv-3.openv2ray.com
   port: 443
   type: vmess
   uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
@@ -13,9 +13,27 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-murytiop75
+   path: /u/opentunnel.net-ozincha2
    headers:
     Host: mobilelegends.com
+
+- name: "backservermelbidsg3"
+  server: sg-9.0rd.net
+  port: 443
+  type: vmess
+  uuid: 9cae5c10-9b44-11ed-b432-205c6d5f5d78
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /ex38mcgb
+   headers:
+    Host: mobilelegends.com
+
 
 - name: "backservermy"
   server: my.v2-ray.cop
@@ -85,7 +103,7 @@ proxies:
    headers:
     Host: mobilelegends.com
 
-- name: "backserversk4-22jan"
+- name: "backserversk4-23feb"
   server: sg4-v2ray.sshkit.org
   port: 443
   type: vmess
@@ -98,6 +116,6 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /sshkit/1074999023/63a516b76ca99/
+   path: /sshkit/1074999023/63cec9036bc6b/
    headers:
     Host: mobilelegends.com
