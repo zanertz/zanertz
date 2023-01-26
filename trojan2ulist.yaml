@@ -70,6 +70,23 @@ proxies:
    headers:
     Host: mm.net.my
 
+- name: "DynamicDo6feb"
+  server: ulist.com.my.dynamic-sg1b.obfs.xyz
+  port: 443
+  type: vmess
+  uuid: 8b31388c-047a-4796-82ec-1dae3bbc589b
+  sni: mm.net.my
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree
+   headers:
+    Host: mm.net.my
+
 - name: "consg2"
   type: trojan
   server: ulist.com.my.ab.gadennyc.cloudns.nz
