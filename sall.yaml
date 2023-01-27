@@ -1,0 +1,234 @@
+proxies:
+
+##### fastest server #####
+
+- name: "freevmessT"
+  type: trojan
+  server: dns.google.sg-freevmess.privateip.net
+  port: 443
+  password: e5327dda-62d6-4588-8fdf-185c90e291b0
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "RaceA"
+  type: trojan
+  server: dns.google.sg-full.privateip.net
+  port: 443
+  password: c839d010-2e02-4d5d-8098-d37c002fdaa8
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "RaceB"
+  type: trojan
+  server: dns.google.sg2-full.privateip.net
+  port: 443
+  password: 68a550e3-a278-4987-b40f-7f1b4310d2c5
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+##### Optional server
+
+- name: "melbi2"
+  server: sg2-mlb.v2vless.xyz
+  port: 443
+  type: vless
+  uuid: 2ad67384-adef-42a5-9ca3-147b9d906360
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mydigiappdev.digi.com.my
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: vaut21.digi.com.my
+  udp: true
+
+- name: "melbi3"
+  server: sg3-mlb.v2vless.xyz
+  port: 443
+  type: vless
+  uuid: 2ad67384-adef-42a5-9ca3-147b9d906360
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mydigiappdev.digi.com.my
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: vaut21.digi.com.my
+  udp: true
+
+- name: "HideDo"
+  server: dns.google.2v66ge.hidessh.my.id
+  port: 443
+  type: trojan
+  password: 5d27cf48-fad3-42e1-8ba8-2aae6a10b450
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /hidessh-trojan-ws
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
+- name: "Do1"
+  type: trojan
+  server: dns.google.do1.kitu.xyz
+  port: 443
+  password: whyvpn-condalta
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+
+##### Timed server #####
+
+- name: "HowdyUdp3Do24jan.17febdns"
+  type: trojan
+  server: trojan3.udpgw.com
+  port: 443
+  password: 64bdfa80-96c6-11ed-ab90-1239d0255272
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "HowdyUdp1Do6feb"
+  type: trojan
+  server: trojan1.udpgw.com
+  port: 443
+  password: 9b3b1640-9e17-11ed-869b-1239d0255272
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "DynamicDo23jan"
+  server: dynamic-sg3b.obfs.xyz
+  port: 443
+  type: vmess
+  uuid: 44f2b093-e90d-402a-8683-05a191ee5f94
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree
+   headers:
+    Host: mobilelegends.com
+
+- name: "Fastdyna19jan"
+  server: dynamic-sg2b.obfs.xyz
+  port: 443
+  type: vmess
+  uuid: 3f1b2bca-8437-4751-ba40-6784c3f056cd
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree
+   headers:
+    Host: mobilelegends.com
+
+- name: "DynamicDo6feb"
+  server: dynamic-sg1b.obfs.xyz
+  port: 443
+  type: vmess
+  uuid: 8b31388c-047a-4796-82ec-1dae3bbc589b
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree
+   headers:
+    Host: mobilelegends.com
+
+
+##### Backup Server ######
+
+proxies:
+
+- name: "backserver"
+  server: sgv-3.openv2ray.com
+  port: 443
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /u/opentunnel.net-ozincha2
+   headers:
+    Host: mobilelegends.com
+
+- name: "backserversk1-22jan"
+  server: sg1-v2ray.sshkit.org
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /sshkit/1074999023/63a51672383c8/
+   headers:
+    Host: mobilelegends.com
+
+- name: "backserversk4-23feb"
+  server: sg4-v2ray.sshkit.org
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /sshkit/1074999023/63cec9036bc6b/
+   headers:
+    Host: mobilelegends.com
+
