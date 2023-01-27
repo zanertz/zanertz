@@ -12,11 +12,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "HowdyUdp1Do10jan.31jandns"
+- name: "HowdyUdp1Do6feb. 26febdns"
   type: trojan
-  server: ulist.com.my.1udp30jan-dns.whyssh.my.id
+  server: ulist.com.my.25feb-dns.whyssh.my.id
   port: 443
-  password: 556a73a0-884f-11ed-982a-1239d0255272
+  password: 9b3b1640-9e17-11ed-869b-1239d0255272
   udp: true
   sni: mm.net.my
   alpn:

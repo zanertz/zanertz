@@ -4,7 +4,7 @@ proxies:
   type: trojan
   server: dns.google.sg2-full.privateip.net
   port: 443
-  password: 09b35870-c948-42a8-9ba3-2ddd155ad8e8
+  password: 68a550e3-a278-4987-b40f-7f1b4310d2c5
   udp: true
   sni: mobilelegends.com
   alpn:
