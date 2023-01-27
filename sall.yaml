@@ -179,8 +179,6 @@ proxies:
 
 ##### Backup Server ######
 
-proxies:
-
 - name: "backserver"
   server: sgv-3.openv2ray.com
   port: 443
