@@ -40,6 +40,22 @@ proxies:
 
 ##### Optional server
 
+- name: "melbi1"
+  server: sg1-mlb.v2vless.xyz
+  port: 443
+  type: vless
+  uuid: 798cd85f-88de-495b-9b83-44f29e90443e
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mobilelegends.com
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: mobilelegends.com
+  udp: true
+
 - name: "melbi2"
   server: sg2-mlb.v2vless.xyz
   port: 443

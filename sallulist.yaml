@@ -40,6 +40,22 @@ proxies:
 
 ##### Optional server
 
+- name: "melbi1"
+  server: ulist.com.my.mel1.merutd.cloudns.nz
+  port: 443
+  type: vless
+  uuid: 798cd85f-88de-495b-9b83-44f29e90443e
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mm.net.my
+  network: ws
+  ws-opts:
+    path: /vless
+    headers:
+      Host: mm.net.my
+  udp: true
+
 - name: "melbi2"
   server: ulist.com.my.mel2.merutd.cloudns.nz
   port: 443
