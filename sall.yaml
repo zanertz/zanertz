@@ -60,7 +60,7 @@ proxies:
   server: sg2-mlb.v2vless.xyz
   port: 443
   type: vless
-  uuid: 2ad67384-adef-42a5-9ca3-147b9d906360
+  uuid: 0dcb6c0e-5abb-4cf0-aa48-5385b191656d
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -76,7 +76,7 @@ proxies:
   server: sg3-mlb.v2vless.xyz
   port: 443
   type: vless
-  uuid: 2aca8a15-a8ea-4c66-9545-a37a1be230bb
+  uuid: 99ca3779-c15a-4331-90aa-fa266330ae33
   cipher: auto
   tls: true
   skip-cert-verify: true
@@ -208,7 +208,7 @@ proxies:
   udp: true
   network: ws
   ws-opts:
-   path: /u/opentunnel.net-lagrnds83
+   path: /u/opentunnel.net-iltixc
    headers:
     Host: mobilelegends.com
 
