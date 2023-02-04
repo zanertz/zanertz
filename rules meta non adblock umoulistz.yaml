@@ -128,7 +128,7 @@ proxy-groups:
   type: load-balance
   url: 'https://bit.ly/3YV7pDy'
   interval: 20
-  strategy: round-robin
+  strategy: consistent-hashing
   disable-udp: false
   tolerance: 600
   lazy: false
