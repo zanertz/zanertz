@@ -40,53 +40,6 @@ proxies:
 
 ##### Optional server
 
-- name: "melbi1"
-  server: ulist.com.my.mel1.merutd.cloudns.nz
-  port: 443
-  type: vless
-  uuid: 798cd85f-88de-495b-9b83-44f29e90443e
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: mm.net.my
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: mm.net.my
-  udp: true
-
-- name: "melbi2"
-  server: ulist.com.my.mel2.merutd.cloudns.nz
-  port: 443
-  type: vless
-  uuid: 0dcb6c0e-5abb-4cf0-aa48-5385b191656d
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: mm.net.my
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: mm.net.my
-  udp: true
-
-- name: "melbi3"
-  server: ulist.com.my.mel3.merutd.cloudns.nz
-  port: 443
-  type: vless
-  uuid: 99ca3779-c15a-4331-90aa-fa266330ae33
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  servername: mm.net.my
-  network: ws
-  ws-opts:
-    path: /vless
-    headers:
-      Host: mm.net.my
-  udp: true
 
 - name: "HideDo"
   server: dns.google.2v66ge.hidessh.my.id
