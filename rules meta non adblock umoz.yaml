@@ -21,11 +21,21 @@ dns:
     - 240.0.0.0/4
   default-nameserver:
     - 1.1.1.1
+    - 9.9.9.9
+    - 1.0.0.1
   nameserver:
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.quad9.net/dns-query
     - tls://1dot1dot1dot1.cloudflare-dns.com:853
+    - tls://dns.quad9.net
   fallback:
     - tcp://1.1.1.1
-  fake-ip-range: 198.18.0.1/16
+    - tcp://9.9.9.9
+    - tcp://1.0.0.1
+    - 1.1.1.1
+    - 9.9.9.9
+    - 1.0.0.1
+  fake-ip-range: 198.18.0.1/16   
   fake-ip-filter:
   - "+.*"
   - ntp7.*.com
@@ -70,6 +80,7 @@ proxy-groups:
   - FallbackLBXFinal
   - PingLBXFinalch
   - PingDiabloMux
+  - SuperRobin3
   - Ping++
   - Ping++mix
   - PingLB++rb
@@ -113,6 +124,18 @@ proxy-groups:
   interval: 12
   use:
   - sall
+- name: SuperRobin3
+  type: load-balance
+  url: 'https://bit.ly/3YV7pDy'
+  interval: 20
+  strategy: round-robin
+  disable-udp: false
+  tolerance: 600
+  lazy: false
+  proxies:
+  - Pinglbx
+  - Pinglb2x
+  - Pinglb3x
 - name: Manual1
   type: select
   url: 'https://bit.ly/3YV7pDy'
@@ -188,8 +211,8 @@ proxy-groups:
 - name: Pinglbx
   type: url-test
   url: 'https://bit.ly/3YV7pDy'
-  interval: 22
-  tolerance: 420
+  interval: 18
+  tolerance: 400
   lazy: false
   use:
   - sall
@@ -198,6 +221,14 @@ proxy-groups:
   url: 'https://bit.ly/3YV7pDy'
   interval: 22
   tolerance: 420
+  lazy: false
+  use:
+  - sall
+- name: Pinglb3x
+  type: url-test
+  url: 'https://bit.ly/3YV7pDy'
+  interval: 24
+  tolerance: 440
   lazy: false
   use:
   - sall
