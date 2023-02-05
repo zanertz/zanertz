@@ -3,7 +3,7 @@ socks-port: 7891
 redir-port: 7892
 tproxy-port: 7893
 mixed-port: 7894
-allow-lan: true
+allow-lan: false
 mode: rule
 log-level: info
 ipv6: false
@@ -15,43 +15,52 @@ dns:
   listen: 0.0.0.0:53
   default-nameserver:
     - 1.1.1.1
+    - 8.8.8.8
     - 1.0.0.1
+    - 9.9.9.9
   nameserver:
     - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+    - https://dns.quad9.net/dns-query
     - tls://1dot1dot1dot1.cloudflare-dns.com:853
+    - tls://dns.google:853
+    - tls://dns.quad9.net:853
   fallback:
     - tcp://1.1.1.1
+    - tcp://8.8.8.8
     - tcp://1.0.0.1
-  dns-hijack:
-    - tcp://1.1.1.1
-    - tcp://1.0.0.1
+    - tcp://9.9.9.9
+    - 1.1.1.1
+    - 8.8.8.8
+    - 1.0.0.1
+    - 9.9.9.9
 
 proxy-groups: 
 - name: All 
   type: select
-  url: 'https://bit.ly/3YV7pDy'
-  interval: 15
+  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  interval: 200
   proxies:
   - Ping++
   - Fallback
   - Manual
 - name: Manual 
   type: select
-  url: 'https://bit.ly/3YV7pDy'
-  interval: 15
+  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  interval: 200
   use:
   - malaycffa
 - name: Ping++
   type: url-test
-  url: 'https://bit.ly/3YV7pDy'
-  interval: 15
-  tolerance: 1200
+  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  interval: 200
+  tolerance: 2000
   use:
   - malaycffa
 - name: Fallback
   type: fallback
-  url: 'https://bit.ly/3YV7pDy'
-  interval: 10
+  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  interval: 200
   lazy: false
   use:
   - malaycffa
@@ -60,13 +69,13 @@ proxy-providers:
   malaycffa:
     type: http
     url: "https://raw.githubusercontent.com/zanertz/zanertz/main/malaycffa.yaml"
-    interval: 120
+    interval: 123
     path: ./malaycffa.yaml
     health-check:
       enable: true
-      interval: 50
+      interval: 60
       lazy: false
-      url: https://bit.ly/3YV7pDy
+      url: https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt
 
 rules:
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT

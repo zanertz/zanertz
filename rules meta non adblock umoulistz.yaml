@@ -21,20 +21,25 @@ dns:
     - 240.0.0.0/4
   default-nameserver:
     - 1.1.1.1
-    - 9.9.9.9
+    - 8.8.8.8
     - 1.0.0.1
+    - 9.9.9.9
   nameserver:
     - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
     - https://dns.quad9.net/dns-query
     - tls://1dot1dot1dot1.cloudflare-dns.com:853
-    - tls://dns.quad9.net
+    - tls://dns.google:853
+    - tls://dns.quad9.net:853
   fallback:
     - tcp://1.1.1.1
-    - tcp://9.9.9.9
+    - tcp://8.8.8.8
     - tcp://1.0.0.1
+    - tcp://9.9.9.9
     - 1.1.1.1
-    - 9.9.9.9
+    - 8.8.8.8
     - 1.0.0.1
+    - 9.9.9.9
   fake-ip-range: 198.18.0.1/16
   fake-ip-filter:
   - "+.*"
