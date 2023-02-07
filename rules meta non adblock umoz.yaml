@@ -139,8 +139,8 @@ proxy-groups:
   lazy: false
   proxies:
   - Pinglbx
+  - Fallbacklb3x
   - Pinglb2x
-  - Pinglb3x
 - name: Manual1
   type: select
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
@@ -216,24 +216,24 @@ proxy-groups:
 - name: Pinglbx
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 18
-  tolerance: 400
+  interval: 15
+  tolerance: 300
   lazy: false
   use:
   - sall
 - name: Pinglb2x
   type: url-test
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 22
-  tolerance: 420
+  interval: 30
+  tolerance: 600
   lazy: false
   use:
   - sall
-- name: Pinglb3x
-  type: url-test
+- name: Fallbacklb3x
+  type: fallback
   url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 24
-  tolerance: 440
+  interval: 60
+  tolerance: 900
   lazy: false
   use:
   - sall
