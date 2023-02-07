@@ -1,43 +1,5 @@
 proxies:
 
-##### fastest server #####
-
-- name: "freevmessT"
-  type: trojan
-  server: ulist.com.my.sg-freevmess.privateip.net
-  port: 443
-  password: e5327dda-62d6-4588-8fdf-185c90e291b0
-  udp: true
-  sni: mm.net.my
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
-- name: "RaceA"
-  type: trojan
-  server: ulist.com.my.sg-full.privateip.net
-  port: 443
-  password: c71aa3ff-fc46-463b-96f5-8cec36c199ec
-  udp: true
-  sni: mm.net.my
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
-- name: "RaceB"
-  type: trojan
-  server: ulist.com.my.sg2-full.privateip.net
-  port: 443
-  password: 37f3e0d4-03ec-4792-a598-7f45c9552ba8
-  udp: true
-  sni: mm.net.my
-  alpn:
-     - h2
-     - http/1.1
-  skip-cert-verify: true
-
 ##### Optional server
 
 - name: "CenterhopeSg1"
@@ -72,6 +34,44 @@ proxies:
   server: dns.google.do1.kitu.xyz
   port: 443
   password: whyvpn-condalta
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+##### fastest server #####
+
+- name: "freevmessT"
+  type: trojan
+  server: ulist.com.my.sg-freevmess.privateip.net
+  port: 443
+  password: e5327dda-62d6-4588-8fdf-185c90e291b0
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "RaceA"
+  type: trojan
+  server: ulist.com.my.sg-full.privateip.net
+  port: 443
+  password: c71aa3ff-fc46-463b-96f5-8cec36c199ec
+  udp: true
+  sni: mm.net.my
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "RaceB"
+  type: trojan
+  server: ulist.com.my.sg2-full.privateip.net
+  port: 443
+  password: 37f3e0d4-03ec-4792-a598-7f45c9552ba8
   udp: true
   sni: mm.net.my
   alpn:
