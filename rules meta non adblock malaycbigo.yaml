@@ -15,25 +15,25 @@ dns:
   listen: 0.0.0.0:53
   default-nameserver:
     - 1.1.1.1
-    - 8.8.8.8
+    - 1.1.1.2
     - 1.0.0.1
-    - 9.9.9.9
+    - 1.0.0.2
   nameserver:
     - https://cloudflare-dns.com/dns-query
-    - https://dns.google/dns-query
-    - https://dns.quad9.net/dns-query
+    - https://security.cloudflare-dns.com/dns-query
+    - https://family.cloudflare-dns.com/dns-query
     - tls://1dot1dot1dot1.cloudflare-dns.com:853
-    - tls://dns.google:853
-    - tls://dns.quad9.net:853
+    - tls://security.cloudflare-dns.com:853
+    - tls://family.cloudflare-dns.com:853
   fallback:
     - tcp://1.1.1.1
-    - tcp://8.8.8.8
+    - tcp://1.1.1.2
     - tcp://1.0.0.1
-    - tcp://9.9.9.9
+    - tcp://1.0.0.2
     - 1.1.1.1
-    - 8.8.8.8
+    - 1.1.1.2
     - 1.0.0.1
-    - 9.9.9.9
+    - 1.0.0.2
 
 proxy-groups: 
 - name: All 
