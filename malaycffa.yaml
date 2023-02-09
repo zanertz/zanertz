@@ -1,22 +1,5 @@
 proxies:
 
-- name: "backserver"
-  server: my.v2-ray.com
-  port: 443
-  type: vmess
-  uuid: 9677bcf0-93a9-11ed-b538-205c6d5f5d78
-  sni: mobilelegends.com
-  alterId: 0
-  cipher: auto
-  tls: true
-  skip-cert-verify: true
-  udp: true
-  network: ws
-  ws-opts:
-   path: /fastssh
-   headers:
-    Host: mobilelegends.com
-
 - name: "oceanbackserver"
   server: my1.v2rayserv.com
   port: 443
