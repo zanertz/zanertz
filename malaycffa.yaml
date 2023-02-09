@@ -17,7 +17,7 @@ proxies:
    headers:
     Host: mobilelegends.com
 
-- name: "backserverjantit"
+- name: "backserverjantity"
   server: my4.vpnjantit.com
   port: 10001
   type: vmess
