@@ -94,11 +94,11 @@ proxies:
      - http/1.1
   skip-cert-verify: true
 
-- name: "HowdyUdp1Do6feb"
+- name: "HowdyUdp2Do22feb"
   type: trojan
-  server: ulist.com.my.25feb-dns.whyssh.my.id
+  server: ulist.com.my.trojh1.merutd.cloudns.nz
   port: 443
-  password: 9b3b1640-9e17-11ed-869b-1239d0255272
+  password: e6430f20-a868-11ed-a388-1239d0255272
   udp: true
   sni: mm.net.my
   alpn:
@@ -123,11 +123,11 @@ proxies:
    headers:
     Host: mm.net.my
 
-- name: "Fastdyna19jan"
+- name: "Fastdyna20feb"
   server: ulist.com.my.dynamic-sg2b.obfs.xyz
   port: 443
   type: vmess
-  uuid: 3f1b2bca-8437-4751-ba40-6784c3f056cd
+  uuid: 50adb8a3-6c50-4b28-8f32-2ed698f85a8a
   sni: mm.net.my
   alterId: 0
   cipher: auto
