@@ -68,7 +68,7 @@ proxy-groups:
 proxy-providers:
   malaycffa:
     type: http
-    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/malaycffa.yaml"
+    url: "https://raw.githubusercontent.com/zanertz/zanertz/main/malaycffax.yaml"
     interval: 123
     path: ./malaycffa.yaml
     health-check:
