@@ -38,7 +38,7 @@ dns:
 proxy-groups: 
 - name: All 
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 200
   proxies:
   - Ping++
@@ -46,20 +46,20 @@ proxy-groups:
   - Manual
 - name: Manual 
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 200
   use:
   - malaycffa
 - name: Ping++
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 200
   tolerance: 2000
   use:
   - malaycffa
 - name: Fallback
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 200
   lazy: false
   use:
@@ -75,7 +75,7 @@ proxy-providers:
       enable: true
       interval: 60
       lazy: false
-      url: https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt
+      url: https://duckduckgo.com
 
 rules:
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT

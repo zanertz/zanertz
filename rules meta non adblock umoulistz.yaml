@@ -78,7 +78,7 @@ tun:
 proxy-groups: 
 - name: All 
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 12
   proxies:
   - PingLBXFinal
@@ -96,7 +96,7 @@ proxy-groups:
   - Manual
 - name: PingLBXFinal
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 10
   tolerance: 2000
   lazy: false
@@ -105,7 +105,7 @@ proxy-groups:
   - PingLB++rb2
 - name: PingLBXFinalch
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   strategy: consistent-hashing
   disable-udp: false
   interval: 10
@@ -116,7 +116,7 @@ proxy-groups:
   - PingLB++ch2
 - name: PingDiabloMux
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 10
   tolerance: 2000
   lazy: false
@@ -125,13 +125,13 @@ proxy-groups:
   - Pinglb2
 - name: Manual 
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 12
   use:
   - sall
 - name: SuperRobin3
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 20
   strategy: round-robin
   disable-udp: false
@@ -143,19 +143,19 @@ proxy-groups:
   - Pinglb2x
 - name: Manual1
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 12
   use:
   - sall
 - name: Manual2
   type: select
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 12
   use:
   - sall
 - name: PingLB++rb
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 24
   strategy: round-robin
   disable-udp: false
@@ -166,7 +166,7 @@ proxy-groups:
   - Pinglb2
 - name: PingLB++rb2
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 24
   strategy: round-robin
   disable-udp: false
@@ -177,7 +177,7 @@ proxy-groups:
   - Pinglb2x
 - name: PingLB++ch
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 24
   strategy: consistent-hashing
   disable-udp: false
@@ -188,7 +188,7 @@ proxy-groups:
   - Pinglbx
 - name: PingLB++ch2
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 24
   strategy: consistent-hashing
   disable-udp: false
@@ -199,7 +199,7 @@ proxy-groups:
   - Pinglb2x
 - name: Pinglb
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 20
   tolerance: 400
   lazy: false
@@ -207,7 +207,7 @@ proxy-groups:
   - sall
 - name: Pinglb2
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 20
   tolerance: 400
   lazy: false
@@ -215,23 +215,23 @@ proxy-groups:
   - sall
 - name: Pinglbx
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 18
-  tolerance: 400
+  url: 'https://duckduckgo.com'
+  interval: 15
+  tolerance: 300
   lazy: false
   use:
   - sall
 - name: Pinglb2x
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
-  interval: 22
-  tolerance: 420
+  url: 'https://duckduckgo.com'
+  interval: 30
+  tolerance: 600
   lazy: false
   use:
   - sall
 - name: Fallbacklb3x
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 60
   tolerance: 900
   lazy: false
@@ -239,7 +239,7 @@ proxy-groups:
   - sall
 - name: Ping++
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 12
   tolerance: 1200
   lazy: false
@@ -247,7 +247,7 @@ proxy-groups:
   - sall
 - name: Ping++mix
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 12
   tolerance: 1200
   lazy: false
@@ -259,7 +259,7 @@ proxy-groups:
   - Fallback
 - name: Pinga
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 20
   tolerance: 400
   lazy: false
@@ -267,7 +267,7 @@ proxy-groups:
   - sall
 - name: Pingb
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 20
   tolerance: 400
   lazy: false
@@ -275,7 +275,7 @@ proxy-groups:
   - sall
 - name: FallbackLBXFinal
   type: url-test
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 10
   tolerance: 2000
   lazy: false
@@ -284,7 +284,7 @@ proxy-groups:
   - FallbackLBrb2
 - name: FallbackLBrb
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 24
   strategy: round-robin
   disable-udp: false
@@ -295,7 +295,7 @@ proxy-groups:
   - Fallback2
 - name: FallbackLBrb2
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 24
   strategy: round-robin
   disable-udp: false
@@ -306,7 +306,7 @@ proxy-groups:
   - Fallback2
 - name: FallbackLBch
   type: load-balance
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   interval: 24
   strategy: consistent-hashing
   disable-udp: false
@@ -316,7 +316,7 @@ proxy-groups:
   - Fallback2
 - name: Fallback
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   tolerance: 420
   interval: 22
   proxies:
@@ -326,7 +326,7 @@ proxy-groups:
   - Pingb
 - name: Fallback2
   type: fallback
-  url: 'https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt'
+  url: 'https://duckduckgo.com'
   tolerance: 420
   interval: 22
   proxies:
@@ -345,7 +345,7 @@ proxy-providers:
       enable: true
       interval: 60
       lazy: true
-      url: https://raw.githubusercontent.com/zanertz/zanertz/main/pinger.txt
+      url: https://duckduckgo.com
 
 rules:
   - DOMAIN-SUFFIX,giftesx.bigo.sg,REJECT
