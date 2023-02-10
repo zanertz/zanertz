@@ -6,7 +6,7 @@ proxies:
   type: trojan
   server: sg2.socifiles.com
   port: 443
-  password: 4e5fcfb0-a711-11ed-b76c-1239d0255272
+  password: dff00330-a965-11ed-bff5-1239d0255272
   udp: true
   sni: mobilelegends.com
   alpn:
