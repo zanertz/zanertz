@@ -1,0 +1,167 @@
+proxies:
+
+##### Optional server
+
+- name: "VpmDo15march"
+  server: sgal1.vpn1.cloud
+  port: 443
+  type: trojan
+  password: b6058df0-abb7-11ed-9a66-cdc46f448286
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: ws
+  ws-opts:
+   path: /trojan
+   headers:
+    Host: mobilelegends.com
+  udp: true
+
+- name: "RaceA"
+  type: trojan
+  server: sg-full.privateip.net
+  port: 443
+  password: 1308515a-743d-4312-9412-07a513093979
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "RaceB"
+  type: trojan
+  server: sg2-full.privateip.net
+  port: 443
+  password: 3c050275-f2e4-44ae-9d7d-91733b580018
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "CenterhopeSg2"
+  type: trojan
+  server: sg2.socifiles.com
+  port: 443
+  password: 85020d30-ad0c-11ed-ab9f-1239d0255272
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "AsiaOneTcp"
+  type: trojan
+  server: asia1.oceis.net
+  port: 443
+  password: 94660920-baaa-11ed-b236-205c6d5f5d78
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+##### Timed server #####
+
+- name: "HowdyUdp2Do22feb"
+  type: trojan
+  server: trojan2.udpgw.com
+  port: 443
+  password: e6430f20-a868-11ed-a388-1239d0255272
+  udp: true
+  sni: mobilelegends.com
+  alpn:
+     - h2
+     - http/1.1
+  skip-cert-verify: true
+
+- name: "Fastdyna13march"
+  server: dynamic-sg1b.obfs.xyz
+  port: 443
+  type: vmess
+  uuid: 2d2e3ce6-33d5-4f39-9c7b-a3cf74cb9556
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /worryfree
+   headers:
+    Host: mobilelegends.com
+
+##### fastest server #####
+
+- name: "RaceVGprc1"
+  server: sg-full.privateip.net
+  port: 2003
+  type: vless
+  uuid: e7aa0ad8-89a4-49c6-aafb-32ae6f82d5da
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  servername: mobilelegends.com
+  sni: mobilelegends.com
+  network: grpc
+  grpc-opts:
+    grpc-mode: gun
+    grpc-service-name: grpc
+  udp: true
+
+- name: "TrogprcOvh"
+  server: sg1.socifiles.com
+  port: 443
+  type: trojan
+  password: fc1417d0-ba79-11ed-9aca-1239d0255272
+  skip-cert-verify: true
+  sni: mobilelegends.com
+  network: grpc
+  grpc-opts:
+   grpc-mode: gun
+   grpc-service-name: trgrpc
+  udp: true
+
+
+##### Backup Server ######
+
+- name: "backserver"
+  server: sgv-3.openv2ray.com
+  port: 443
+  type: vmess
+  uuid: a40d34c6-b77c-4648-9210-3e8d2f4226b5
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /u/opentunnel.net-iltixc
+   headers:
+    Host: mobilelegends.com
+
+- name: "backserversk4-30march"
+  server: sg4-v2ray.sshkit.org
+  port: 443
+  type: vmess
+  uuid: c6747da4-fb2e-4a2a-bdb7-8614bdd6b0b3
+  sni: mobilelegends.com
+  alterId: 0
+  cipher: auto
+  tls: true
+  skip-cert-verify: true
+  udp: true
+  network: ws
+  ws-opts:
+   path: /sshkit/1074999023/63fd497453494/
+   headers:
+    Host: mobilelegends.com
+
+
+
